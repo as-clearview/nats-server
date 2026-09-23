@@ -1,0 +1,12 @@
+package server
+
+import "time"
+
+func flushExperimentState(n int) ConsumerState {
+	state := ConsumerState{Delivered: SequencePair{Consumer: uint64(n), Stream: uint64(n)}, Pending: make(map[uint64]*Pending, n)}
+	ts := time.Now().UnixNano()
+	for seq := uint64(1); seq <= uint64(n); seq++ {
+		state.Pending[seq] = &Pending{Sequence: seq, Timestamp: ts}
+	}
+	return state
+}

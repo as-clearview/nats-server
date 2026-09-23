@@ -1,0 +1,178 @@
+package server
+
+import (
+	"encoding/json"
+	"fmt"
+	"os"
+	"runtime"
+	"sort"
+	"strconv"
+	"strings"
+	"sync"
+	"sync/atomic"
+	"testing"
+	"time"
+
+	"github.com/nats-io/nats.go"
+)
+
+// Seeds a valid large outstanding state rather than timing its accumulation.
+// Stream messages and all measured progress/final ACKs and pulls use the real server.
+func TestConsumerFlushProtocolExperiment(t *testing.T) {
+	if os.Getenv("NATS_FLUSH_PROTOCOL") == "" {
+		t.Skip("opt-in protocol load experiment")
+	}
+	n, err := strconv.Atoi(os.Getenv("NATS_FLUSH_PENDING"))
+	require_NoError(t, err)
+	duration, err := time.ParseDuration(os.Getenv("NATS_FLUSH_DURATION"))
+	require_NoError(t, err)
+	s := RunBasicJetStreamServer(t)
+	defer s.Shutdown()
+	mset, err := s.GlobalAccount().addStream(&StreamConfig{Name: "LOAD", Subjects: []string{"input"}, Storage: FileStorage, Retention: WorkQueuePolicy})
+	require_NoError(t, err)
+	nc := clientConnectToServer(t, s)
+	defer nc.Close()
+	setupJS, err := nc.JetStream(nats.MaxWait(10 * time.Second))
+	require_NoError(t, err)
+	for i := 0; i < n; i++ {
+		if i%1000 == 999 || i == n-1 {
+			_, err := setupJS.Publish("input", []byte("synthetic"))
+			require_NoError(t, err)
+		} else {
+			require_NoError(t, nc.Publish("input", []byte("synthetic")))
+		}
+	}
+	require_NoError(t, nc.FlushTimeout(10*time.Second))
+	checkFor(t, 20*time.Second, 10*time.Millisecond, func() error {
+		if count := mset.state().Msgs; count != uint64(n) {
+			return fmt.Errorf("stream messages: got %d, want %d", count, n)
+		}
+		return nil
+	})
+	o, err := mset.addConsumer(&ConsumerConfig{Durable: "C", AckPolicy: AckExplicit, AckWait: time.Hour, MaxAckPending: -1})
+	require_NoError(t, err)
+	state := flushExperimentState(n)
+	o.mu.Lock()
+	o.pending = state.Pending
+	o.sseq, o.dseq = uint64(n)+1, uint64(n)+1
+	o.asflr, o.adflr, o.npc = 0, 0, 0
+	require_NoError(t, o.store.Update(&state))
+	// Model an expired delivery population at startup, with no additional
+	// expirations during the measurement window.
+	if os.Getenv("NATS_FLUSH_REDELIVERY") != "0" {
+		seqs := make([]uint64, n)
+		for i := range seqs {
+			seqs[i] = uint64(i) + 1
+		}
+		o.addToRedeliverQueue(seqs...)
+	}
+	o.resetPtmr(time.Hour)
+	progressSubjects := make([]string, min(n/2, 300000))
+	for i := range progressSubjects {
+		seq := uint64(i) + 1
+		progressSubjects[i] = o.ackReply(seq, seq, 1, time.Now().UnixNano(), 0)
+	}
+	finalSubjects := make([]string, min(n/4, int(duration.Seconds()*100)+100))
+	for i := range finalSubjects {
+		seq := uint64(n - i)
+		finalSubjects[i] = o.ackReply(seq, seq, 1, time.Now().UnixNano(), 0)
+	}
+	o.mu.Unlock()
+	state = ConsumerState{}
+	runtime.GC()
+
+	var received atomic.Int64
+	var repliesMu sync.Mutex
+	var latencies []float64
+	var unexpectedReplies atomic.Int64
+	inbox := nats.NewInbox()
+	replies, err := nc.Subscribe(inbox+".*", func(msg *nats.Msg) {
+		stamp, err := strconv.ParseInt(msg.Subject[strings.LastIndexByte(msg.Subject, '.')+1:], 10, 64)
+		if err != nil || len(msg.Data) != 0 {
+			unexpectedReplies.Add(1)
+			return
+		}
+		repliesMu.Lock()
+		latencies = append(latencies, float64(time.Now().UnixNano()-stamp)/1e6)
+		repliesMu.Unlock()
+	})
+	require_NoError(t, err)
+	defer replies.Unsubscribe()
+	js, err := nc.JetStream()
+	require_NoError(t, err)
+	sub, err := js.PullSubscribe("input", "C", nats.Bind("LOAD", "C"))
+	require_NoError(t, err)
+	defer sub.Unsubscribe()
+	require_NoError(t, nc.FlushTimeout(10*time.Second))
+	stop := make(chan struct{})
+	pullDone := make(chan struct{})
+	go func() {
+		defer close(pullDone)
+		for {
+			select {
+			case <-stop:
+				return
+			default:
+			}
+			messages, _ := sub.Fetch(100, nats.MaxWait(500*time.Millisecond))
+			received.Add(int64(len(messages)))
+		}
+	}()
+	var before, after runtime.MemStats
+	runtime.ReadMemStats(&before)
+	start := time.Now()
+	ticker := time.NewTicker(10 * time.Millisecond)
+	defer ticker.Stop()
+	var progressSent, finalSent int
+	var peakQueued int64
+	var samples []map[string]any
+	lastSample := start
+	for time.Since(start) < duration {
+		<-ticker.C
+		for i := 0; i < 200; i++ {
+			require_NoError(t, nc.Publish(progressSubjects[progressSent%len(progressSubjects)], AckProgress))
+			progressSent++
+		}
+		if finalSent < len(finalSubjects) {
+			reply := fmt.Sprintf("%s.%d", inbox, time.Now().UnixNano())
+			require_NoError(t, nc.PublishRequest(finalSubjects[finalSent], reply, AckAck))
+			finalSent++
+		}
+		queued := atomic.LoadInt64(&o.awl)
+		peakQueued = max(peakQueued, queued)
+		if time.Since(lastSample) >= time.Second {
+			samples = append(samples, map[string]any{"elapsed_s": time.Since(start).Seconds(), "acks_unprocessed": queued, "delivered": received.Load()})
+			lastSample = time.Now()
+		}
+	}
+	close(stop)
+	<-pullDone
+	require_NoError(t, nc.FlushTimeout(10*time.Second))
+	atStop := time.Since(start)
+	queueAtStop, deliveryAtStop := atomic.LoadInt64(&o.awl), received.Load()
+	checkFor(t, 90*time.Second, 100*time.Millisecond, func() error {
+		repliesMu.Lock()
+		done := len(latencies)
+		repliesMu.Unlock()
+		if atomic.LoadInt64(&o.awl) != 0 || done != finalSent {
+			return fmt.Errorf("waiting for %d confirmations, got %d; queue %d", finalSent, done, atomic.LoadInt64(&o.awl))
+		}
+		return nil
+	})
+	runtime.ReadMemStats(&after)
+	repliesMu.Lock()
+	sort.Float64s(latencies)
+	pct := func(p float64) float64 {
+		if len(latencies) == 0 {
+			return 0
+		}
+		return latencies[int(float64(len(latencies)-1)*p)]
+	}
+	report := map[string]any{"pending_seed": n, "redelivery_enabled": os.Getenv("NATS_FLUSH_REDELIVERY") != "0", "offered_seconds": atStop.Seconds(), "progress_sent": progressSent, "final_sent": finalSent, "final_confirmed": len(latencies), "final_p50_ms": pct(.5), "final_p95_ms": pct(.95), "final_p99_ms": pct(.99), "acks_unprocessed_at_stop": queueAtStop, "acks_unprocessed_peak": peakQueued, "delivered_at_stop": deliveryAtStop, "drain_seconds": time.Since(start).Seconds() - atStop.Seconds(), "allocated_bytes": after.TotalAlloc - before.TotalAlloc, "gc_cycles": after.NumGC - before.NumGC, "samples": samples}
+	repliesMu.Unlock()
+	encoded, err := json.Marshal(report)
+	require_NoError(t, err)
+	fmt.Printf("PROTOCOL_RESULT %s\n", encoded)
+	require_Equal(t, unexpectedReplies.Load(), int64(0))
+	require_Equal(t, mset.state().Msgs, uint64(n-finalSent))
+}
