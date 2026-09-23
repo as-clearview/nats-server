@@ -1,0 +1,967 @@
+=== RUN   TestConsumerRedeliveryQueueOperations
+--- PASS: TestConsumerRedeliveryQueueOperations (0.00s)
+=== RUN   TestConsumerRedeliveryQueueInterleaved
+--- PASS: TestConsumerRedeliveryQueueInterleaved (0.02s)
+=== RUN   TestFileStoreConsumer
+=== RUN   TestFileStoreConsumer/None-None
+=== RUN   TestFileStoreConsumer/None-S2
+=== RUN   TestFileStoreConsumer/AES-GCM-None
+=== RUN   TestFileStoreConsumer/AES-GCM-S2
+=== RUN   TestFileStoreConsumer/ChaCha20-Poly1305-None
+=== RUN   TestFileStoreConsumer/ChaCha20-Poly1305-S2
+--- PASS: TestFileStoreConsumer (0.81s)
+    --- PASS: TestFileStoreConsumer/None-None (0.13s)
+    --- PASS: TestFileStoreConsumer/None-S2 (0.14s)
+    --- PASS: TestFileStoreConsumer/AES-GCM-None (0.14s)
+    --- PASS: TestFileStoreConsumer/AES-GCM-S2 (0.14s)
+    --- PASS: TestFileStoreConsumer/ChaCha20-Poly1305-None (0.13s)
+    --- PASS: TestFileStoreConsumer/ChaCha20-Poly1305-S2 (0.14s)
+=== RUN   TestFileStoreConsumerEncodeDecodeRedelivered
+--- PASS: TestFileStoreConsumerEncodeDecodeRedelivered (0.00s)
+=== RUN   TestFileStoreConsumerEncodeDecodePendingBelowStreamAckFloor
+--- PASS: TestFileStoreConsumerEncodeDecodePendingBelowStreamAckFloor (0.00s)
+=== RUN   TestFileStoreConsumerRedeliveredLost
+=== RUN   TestFileStoreConsumerRedeliveredLost/None-None
+=== RUN   TestFileStoreConsumerRedeliveredLost/None-S2
+=== RUN   TestFileStoreConsumerRedeliveredLost/AES-GCM-None
+=== RUN   TestFileStoreConsumerRedeliveredLost/AES-GCM-S2
+=== RUN   TestFileStoreConsumerRedeliveredLost/ChaCha20-Poly1305-None
+=== RUN   TestFileStoreConsumerRedeliveredLost/ChaCha20-Poly1305-S2
+--- PASS: TestFileStoreConsumerRedeliveredLost (1.02s)
+    --- PASS: TestFileStoreConsumerRedeliveredLost/None-None (0.17s)
+    --- PASS: TestFileStoreConsumerRedeliveredLost/None-S2 (0.17s)
+    --- PASS: TestFileStoreConsumerRedeliveredLost/AES-GCM-None (0.17s)
+    --- PASS: TestFileStoreConsumerRedeliveredLost/AES-GCM-S2 (0.17s)
+    --- PASS: TestFileStoreConsumerRedeliveredLost/ChaCha20-Poly1305-None (0.17s)
+    --- PASS: TestFileStoreConsumerRedeliveredLost/ChaCha20-Poly1305-S2 (0.17s)
+=== RUN   TestFileStoreConsumerUpdateAcksFlushesRedelivered
+=== RUN   TestFileStoreConsumerUpdateAcksFlushesRedelivered/None-None
+=== RUN   TestFileStoreConsumerUpdateAcksFlushesRedelivered/None-S2
+=== RUN   TestFileStoreConsumerUpdateAcksFlushesRedelivered/AES-GCM-None
+=== RUN   TestFileStoreConsumerUpdateAcksFlushesRedelivered/AES-GCM-S2
+=== RUN   TestFileStoreConsumerUpdateAcksFlushesRedelivered/ChaCha20-Poly1305-None
+=== RUN   TestFileStoreConsumerUpdateAcksFlushesRedelivered/ChaCha20-Poly1305-S2
+--- PASS: TestFileStoreConsumerUpdateAcksFlushesRedelivered (3.06s)
+    --- PASS: TestFileStoreConsumerUpdateAcksFlushesRedelivered/None-None (0.51s)
+    --- PASS: TestFileStoreConsumerUpdateAcksFlushesRedelivered/None-S2 (0.51s)
+    --- PASS: TestFileStoreConsumerUpdateAcksFlushesRedelivered/AES-GCM-None (0.51s)
+    --- PASS: TestFileStoreConsumerUpdateAcksFlushesRedelivered/AES-GCM-S2 (0.51s)
+    --- PASS: TestFileStoreConsumerUpdateAcksFlushesRedelivered/ChaCha20-Poly1305-None (0.51s)
+    --- PASS: TestFileStoreConsumerUpdateAcksFlushesRedelivered/ChaCha20-Poly1305-S2 (0.52s)
+=== RUN   TestFileStoreConsumerFlusher
+=== RUN   TestFileStoreConsumerFlusher/None-None
+=== RUN   TestFileStoreConsumerFlusher/None-S2
+=== RUN   TestFileStoreConsumerFlusher/AES-GCM-None
+=== RUN   TestFileStoreConsumerFlusher/AES-GCM-S2
+=== RUN   TestFileStoreConsumerFlusher/ChaCha20-Poly1305-None
+=== RUN   TestFileStoreConsumerFlusher/ChaCha20-Poly1305-S2
+--- PASS: TestFileStoreConsumerFlusher (0.86s)
+    --- PASS: TestFileStoreConsumerFlusher/None-None (0.15s)
+    --- PASS: TestFileStoreConsumerFlusher/None-S2 (0.15s)
+    --- PASS: TestFileStoreConsumerFlusher/AES-GCM-None (0.12s)
+    --- PASS: TestFileStoreConsumerFlusher/AES-GCM-S2 (0.15s)
+    --- PASS: TestFileStoreConsumerFlusher/ChaCha20-Poly1305-None (0.15s)
+    --- PASS: TestFileStoreConsumerFlusher/ChaCha20-Poly1305-S2 (0.15s)
+=== RUN   TestFileStoreConsumerDeliveredUpdates
+=== RUN   TestFileStoreConsumerDeliveredUpdates/None-None
+=== RUN   TestFileStoreConsumerDeliveredUpdates/None-S2
+=== RUN   TestFileStoreConsumerDeliveredUpdates/AES-GCM-None
+=== RUN   TestFileStoreConsumerDeliveredUpdates/AES-GCM-S2
+=== RUN   TestFileStoreConsumerDeliveredUpdates/ChaCha20-Poly1305-None
+=== RUN   TestFileStoreConsumerDeliveredUpdates/ChaCha20-Poly1305-S2
+--- PASS: TestFileStoreConsumerDeliveredUpdates (0.63s)
+    --- PASS: TestFileStoreConsumerDeliveredUpdates/None-None (0.11s)
+    --- PASS: TestFileStoreConsumerDeliveredUpdates/None-S2 (0.11s)
+    --- PASS: TestFileStoreConsumerDeliveredUpdates/AES-GCM-None (0.11s)
+    --- PASS: TestFileStoreConsumerDeliveredUpdates/AES-GCM-S2 (0.11s)
+    --- PASS: TestFileStoreConsumerDeliveredUpdates/ChaCha20-Poly1305-None (0.11s)
+    --- PASS: TestFileStoreConsumerDeliveredUpdates/ChaCha20-Poly1305-S2 (0.10s)
+=== RUN   TestFileStoreConsumerDeliveredAndAckUpdates
+=== RUN   TestFileStoreConsumerDeliveredAndAckUpdates/None-None
+=== RUN   TestFileStoreConsumerDeliveredAndAckUpdates/None-S2
+=== RUN   TestFileStoreConsumerDeliveredAndAckUpdates/AES-GCM-None
+=== RUN   TestFileStoreConsumerDeliveredAndAckUpdates/AES-GCM-S2
+=== RUN   TestFileStoreConsumerDeliveredAndAckUpdates/ChaCha20-Poly1305-None
+=== RUN   TestFileStoreConsumerDeliveredAndAckUpdates/ChaCha20-Poly1305-S2
+--- PASS: TestFileStoreConsumerDeliveredAndAckUpdates (0.68s)
+    --- PASS: TestFileStoreConsumerDeliveredAndAckUpdates/None-None (0.11s)
+    --- PASS: TestFileStoreConsumerDeliveredAndAckUpdates/None-S2 (0.12s)
+    --- PASS: TestFileStoreConsumerDeliveredAndAckUpdates/AES-GCM-None (0.12s)
+    --- PASS: TestFileStoreConsumerDeliveredAndAckUpdates/AES-GCM-S2 (0.10s)
+    --- PASS: TestFileStoreConsumerDeliveredAndAckUpdates/ChaCha20-Poly1305-None (0.12s)
+    --- PASS: TestFileStoreConsumerDeliveredAndAckUpdates/ChaCha20-Poly1305-S2 (0.12s)
+=== RUN   TestFileStoreConsumerPerf
+--- SKIP: TestFileStoreConsumerPerf (0.00s)
+=== RUN   TestFileStoreConsumerStoreEncodeAfterRestart
+=== RUN   TestFileStoreConsumerStoreEncodeAfterRestart/None-None
+=== RUN   TestFileStoreConsumerStoreEncodeAfterRestart/None-S2
+=== RUN   TestFileStoreConsumerStoreEncodeAfterRestart/AES-GCM-None
+=== RUN   TestFileStoreConsumerStoreEncodeAfterRestart/AES-GCM-S2
+=== RUN   TestFileStoreConsumerStoreEncodeAfterRestart/ChaCha20-Poly1305-None
+=== RUN   TestFileStoreConsumerStoreEncodeAfterRestart/ChaCha20-Poly1305-S2
+--- PASS: TestFileStoreConsumerStoreEncodeAfterRestart (0.63s)
+    --- PASS: TestFileStoreConsumerStoreEncodeAfterRestart/None-None (0.11s)
+    --- PASS: TestFileStoreConsumerStoreEncodeAfterRestart/None-S2 (0.10s)
+    --- PASS: TestFileStoreConsumerStoreEncodeAfterRestart/AES-GCM-None (0.11s)
+    --- PASS: TestFileStoreConsumerStoreEncodeAfterRestart/AES-GCM-S2 (0.11s)
+    --- PASS: TestFileStoreConsumerStoreEncodeAfterRestart/ChaCha20-Poly1305-None (0.10s)
+    --- PASS: TestFileStoreConsumerStoreEncodeAfterRestart/ChaCha20-Poly1305-S2 (0.11s)
+=== RUN   TestFileStoreStoreRawMessageThrowsPermissionErrorIfFSModeReadOnly
+--- PASS: TestFileStoreStoreRawMessageThrowsPermissionErrorIfFSModeReadOnly (0.00s)
+=== RUN   TestFileStoreWriteFullStateThrowsPermissionErrorIfFSModeReadOnly
+--- PASS: TestFileStoreWriteFullStateThrowsPermissionErrorIfFSModeReadOnly (0.12s)
+=== RUN   TestJetStreamConsumerMultipleFiltersRemoveFilters
+--- PASS: TestJetStreamConsumerMultipleFiltersRemoveFilters (0.02s)
+=== RUN   TestJetStreamConsumerMultipleFiltersRace
+--- PASS: TestJetStreamConsumerMultipleFiltersRace (5.09s)
+=== RUN   TestJetStreamConsumerMultipleConsumersSingleFilter
+--- PASS: TestJetStreamConsumerMultipleConsumersSingleFilter (8.05s)
+=== RUN   TestJetStreamConsumerMultipleConsumersMultipleFilters
+--- PASS: TestJetStreamConsumerMultipleConsumersMultipleFilters (1.72s)
+=== RUN   TestJetStreamConsumerMultipleFiltersSequence
+--- PASS: TestJetStreamConsumerMultipleFiltersSequence (0.03s)
+=== RUN   TestJetStreamConsumerActions
+--- PASS: TestJetStreamConsumerActions (0.01s)
+=== RUN   TestJetStreamConsumerActionsOnWorkQueuePolicyStream
+--- PASS: TestJetStreamConsumerActionsOnWorkQueuePolicyStream (0.01s)
+=== RUN   TestJetStreamConsumerActionsViaAPI
+--- PASS: TestJetStreamConsumerActionsViaAPI (0.01s)
+=== RUN   TestJetStreamConsumerActionsUnmarshal
+=== RUN   TestJetStreamConsumerActionsUnmarshal/action_create
+given: false, expected: <nil>
+=== RUN   TestJetStreamConsumerActionsUnmarshal/action_update
+given: false, expected: <nil>
+=== RUN   TestJetStreamConsumerActionsUnmarshal/no_action
+given: false, expected: <nil>
+=== RUN   TestJetStreamConsumerActionsUnmarshal/unknown
+given: true, expected: unknown consumer action: "unknown"
+--- PASS: TestJetStreamConsumerActionsUnmarshal (0.00s)
+    --- PASS: TestJetStreamConsumerActionsUnmarshal/action_create (0.00s)
+    --- PASS: TestJetStreamConsumerActionsUnmarshal/action_update (0.00s)
+    --- PASS: TestJetStreamConsumerActionsUnmarshal/no_action (0.00s)
+    --- PASS: TestJetStreamConsumerActionsUnmarshal/unknown (0.00s)
+=== RUN   TestJetStreamConsumerMultipleFiltersLastPerSubject
+--- PASS: TestJetStreamConsumerMultipleFiltersLastPerSubject (0.36s)
+=== RUN   TestJetStreamConsumerIsFilteredMatch
+=== RUN   TestJetStreamConsumerIsFilteredMatch/no_filter
+=== PAUSE TestJetStreamConsumerIsFilteredMatch/no_filter
+=== RUN   TestJetStreamConsumerIsFilteredMatch/literal_match
+=== PAUSE TestJetStreamConsumerIsFilteredMatch/literal_match
+=== RUN   TestJetStreamConsumerIsFilteredMatch/literal_mismatch
+=== PAUSE TestJetStreamConsumerIsFilteredMatch/literal_mismatch
+=== RUN   TestJetStreamConsumerIsFilteredMatch/wildcard_>_match
+=== PAUSE TestJetStreamConsumerIsFilteredMatch/wildcard_>_match
+=== RUN   TestJetStreamConsumerIsFilteredMatch/wildcard_>_match#01
+=== PAUSE TestJetStreamConsumerIsFilteredMatch/wildcard_>_match#01
+=== RUN   TestJetStreamConsumerIsFilteredMatch/wildcard_>_mismatch
+=== PAUSE TestJetStreamConsumerIsFilteredMatch/wildcard_>_mismatch
+=== RUN   TestJetStreamConsumerIsFilteredMatch/wildcard_*_match
+=== PAUSE TestJetStreamConsumerIsFilteredMatch/wildcard_*_match
+=== RUN   TestJetStreamConsumerIsFilteredMatch/wildcard_*_match#01
+=== PAUSE TestJetStreamConsumerIsFilteredMatch/wildcard_*_match#01
+=== RUN   TestJetStreamConsumerIsFilteredMatch/wildcard_*_mismatch
+=== PAUSE TestJetStreamConsumerIsFilteredMatch/wildcard_*_mismatch
+=== RUN   TestJetStreamConsumerIsFilteredMatch/wildcard_*_match#02
+=== PAUSE TestJetStreamConsumerIsFilteredMatch/wildcard_*_match#02
+=== RUN   TestJetStreamConsumerIsFilteredMatch/wildcard_*_match#03
+=== PAUSE TestJetStreamConsumerIsFilteredMatch/wildcard_*_match#03
+=== RUN   TestJetStreamConsumerIsFilteredMatch/many_mismatch
+=== PAUSE TestJetStreamConsumerIsFilteredMatch/many_mismatch
+=== RUN   TestJetStreamConsumerIsFilteredMatch/many_match
+=== PAUSE TestJetStreamConsumerIsFilteredMatch/many_match
+=== CONT  TestJetStreamConsumerIsFilteredMatch/no_filter
+=== CONT  TestJetStreamConsumerIsFilteredMatch/wildcard_*_match
+=== CONT  TestJetStreamConsumerIsFilteredMatch/wildcard_>_mismatch
+=== CONT  TestJetStreamConsumerIsFilteredMatch/wildcard_>_match
+=== CONT  TestJetStreamConsumerIsFilteredMatch/literal_match
+=== CONT  TestJetStreamConsumerIsFilteredMatch/literal_mismatch
+=== CONT  TestJetStreamConsumerIsFilteredMatch/many_mismatch
+=== CONT  TestJetStreamConsumerIsFilteredMatch/wildcard_*_match#03
+=== CONT  TestJetStreamConsumerIsFilteredMatch/wildcard_>_match#01
+=== CONT  TestJetStreamConsumerIsFilteredMatch/wildcard_*_match#02
+=== CONT  TestJetStreamConsumerIsFilteredMatch/wildcard_*_match#01
+=== CONT  TestJetStreamConsumerIsFilteredMatch/many_match
+=== CONT  TestJetStreamConsumerIsFilteredMatch/wildcard_*_mismatch
+--- PASS: TestJetStreamConsumerIsFilteredMatch (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilteredMatch/no_filter (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilteredMatch/wildcard_*_match (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilteredMatch/wildcard_>_mismatch (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilteredMatch/literal_match (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilteredMatch/wildcard_>_match (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilteredMatch/literal_mismatch (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilteredMatch/wildcard_*_match#03 (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilteredMatch/wildcard_>_match#01 (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilteredMatch/many_mismatch (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilteredMatch/wildcard_*_match#01 (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilteredMatch/wildcard_*_match#02 (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilteredMatch/many_match (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilteredMatch/wildcard_*_mismatch (0.00s)
+=== RUN   TestJetStreamConsumerWorkQueuePolicyOverlap
+--- PASS: TestJetStreamConsumerWorkQueuePolicyOverlap (0.01s)
+=== RUN   TestJetStreamConsumerIsEqualOrSubsetMatch
+=== RUN   TestJetStreamConsumerIsEqualOrSubsetMatch/no_filter
+=== PAUSE TestJetStreamConsumerIsEqualOrSubsetMatch/no_filter
+=== RUN   TestJetStreamConsumerIsEqualOrSubsetMatch/literal_match
+=== PAUSE TestJetStreamConsumerIsEqualOrSubsetMatch/literal_match
+=== RUN   TestJetStreamConsumerIsEqualOrSubsetMatch/literal_mismatch
+=== PAUSE TestJetStreamConsumerIsEqualOrSubsetMatch/literal_mismatch
+=== RUN   TestJetStreamConsumerIsEqualOrSubsetMatch/literal_match#01
+=== PAUSE TestJetStreamConsumerIsEqualOrSubsetMatch/literal_match#01
+=== RUN   TestJetStreamConsumerIsEqualOrSubsetMatch/subset_match
+=== PAUSE TestJetStreamConsumerIsEqualOrSubsetMatch/subset_match
+=== RUN   TestJetStreamConsumerIsEqualOrSubsetMatch/subset_mismatch
+=== PAUSE TestJetStreamConsumerIsEqualOrSubsetMatch/subset_mismatch
+=== RUN   TestJetStreamConsumerIsEqualOrSubsetMatch/literal_match#02
+=== PAUSE TestJetStreamConsumerIsEqualOrSubsetMatch/literal_match#02
+=== RUN   TestJetStreamConsumerIsEqualOrSubsetMatch/subset_match#01
+=== PAUSE TestJetStreamConsumerIsEqualOrSubsetMatch/subset_match#01
+=== CONT  TestJetStreamConsumerIsEqualOrSubsetMatch/literal_match#01
+=== CONT  TestJetStreamConsumerIsEqualOrSubsetMatch/subset_match
+=== CONT  TestJetStreamConsumerIsEqualOrSubsetMatch/literal_mismatch
+=== CONT  TestJetStreamConsumerIsEqualOrSubsetMatch/literal_match
+=== CONT  TestJetStreamConsumerIsEqualOrSubsetMatch/subset_match#01
+=== CONT  TestJetStreamConsumerIsEqualOrSubsetMatch/no_filter
+=== CONT  TestJetStreamConsumerIsEqualOrSubsetMatch/subset_mismatch
+=== CONT  TestJetStreamConsumerIsEqualOrSubsetMatch/literal_match#02
+--- PASS: TestJetStreamConsumerIsEqualOrSubsetMatch (0.00s)
+    --- PASS: TestJetStreamConsumerIsEqualOrSubsetMatch/literal_match#01 (0.00s)
+    --- PASS: TestJetStreamConsumerIsEqualOrSubsetMatch/subset_match (0.00s)
+    --- PASS: TestJetStreamConsumerIsEqualOrSubsetMatch/literal_match (0.00s)
+    --- PASS: TestJetStreamConsumerIsEqualOrSubsetMatch/literal_mismatch (0.00s)
+    --- PASS: TestJetStreamConsumerIsEqualOrSubsetMatch/subset_match#01 (0.00s)
+    --- PASS: TestJetStreamConsumerIsEqualOrSubsetMatch/no_filter (0.00s)
+    --- PASS: TestJetStreamConsumerIsEqualOrSubsetMatch/subset_mismatch (0.00s)
+    --- PASS: TestJetStreamConsumerIsEqualOrSubsetMatch/literal_match#02 (0.00s)
+=== RUN   TestJetStreamConsumerIsFilterSubsetOf
+=== RUN   TestJetStreamConsumerIsFilterSubsetOf/no_filter
+=== PAUSE TestJetStreamConsumerIsFilterSubsetOf/no_filter
+=== RUN   TestJetStreamConsumerIsFilterSubsetOf/single_literal_equal
+=== PAUSE TestJetStreamConsumerIsFilterSubsetOf/single_literal_equal
+=== RUN   TestJetStreamConsumerIsFilterSubsetOf/single_literal_mismatch
+=== PAUSE TestJetStreamConsumerIsFilterSubsetOf/single_literal_mismatch
+=== RUN   TestJetStreamConsumerIsFilterSubsetOf/all_literals_contained
+=== PAUSE TestJetStreamConsumerIsFilterSubsetOf/all_literals_contained
+=== RUN   TestJetStreamConsumerIsFilterSubsetOf/one_literal_outside
+=== PAUSE TestJetStreamConsumerIsFilterSubsetOf/one_literal_outside
+=== RUN   TestJetStreamConsumerIsFilterSubsetOf/wildcards_contained
+=== PAUSE TestJetStreamConsumerIsFilterSubsetOf/wildcards_contained
+=== RUN   TestJetStreamConsumerIsFilterSubsetOf/filter_wider_than_subject
+=== PAUSE TestJetStreamConsumerIsFilterSubsetOf/filter_wider_than_subject
+=== RUN   TestJetStreamConsumerIsFilterSubsetOf/rollup_matches_only_one_filter
+=== PAUSE TestJetStreamConsumerIsFilterSubsetOf/rollup_matches_only_one_filter
+=== RUN   TestJetStreamConsumerIsFilterSubsetOf/partial_wildcard_intersection
+=== PAUSE TestJetStreamConsumerIsFilterSubsetOf/partial_wildcard_intersection
+=== RUN   TestJetStreamConsumerIsFilterSubsetOf/partial_wildcard_intersection_short
+=== PAUSE TestJetStreamConsumerIsFilterSubsetOf/partial_wildcard_intersection_short
+=== CONT  TestJetStreamConsumerIsFilterSubsetOf/wildcards_contained
+=== CONT  TestJetStreamConsumerIsFilterSubsetOf/partial_wildcard_intersection
+=== CONT  TestJetStreamConsumerIsFilterSubsetOf/partial_wildcard_intersection_short
+=== CONT  TestJetStreamConsumerIsFilterSubsetOf/rollup_matches_only_one_filter
+=== CONT  TestJetStreamConsumerIsFilterSubsetOf/filter_wider_than_subject
+=== CONT  TestJetStreamConsumerIsFilterSubsetOf/one_literal_outside
+=== CONT  TestJetStreamConsumerIsFilterSubsetOf/single_literal_mismatch
+=== CONT  TestJetStreamConsumerIsFilterSubsetOf/single_literal_equal
+=== CONT  TestJetStreamConsumerIsFilterSubsetOf/all_literals_contained
+=== CONT  TestJetStreamConsumerIsFilterSubsetOf/no_filter
+--- PASS: TestJetStreamConsumerIsFilterSubsetOf (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilterSubsetOf/wildcards_contained (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilterSubsetOf/partial_wildcard_intersection (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilterSubsetOf/partial_wildcard_intersection_short (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilterSubsetOf/rollup_matches_only_one_filter (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilterSubsetOf/filter_wider_than_subject (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilterSubsetOf/one_literal_outside (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilterSubsetOf/single_literal_mismatch (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilterSubsetOf/single_literal_equal (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilterSubsetOf/all_literals_contained (0.00s)
+    --- PASS: TestJetStreamConsumerIsFilterSubsetOf/no_filter (0.00s)
+=== RUN   TestJetStreamConsumerBackOff
+=== RUN   TestJetStreamConsumerBackOff/backoff_with_max_deliver
+=== RUN   TestJetStreamConsumerBackOff/backoff_with_max_deliver_equal
+=== RUN   TestJetStreamConsumerBackOff/backoff_with_max_deliver_equal_to_zero
+=== RUN   TestJetStreamConsumerBackOff/backoff_with_max_deliver_smaller
+=== RUN   TestJetStreamConsumerBackOff/backoff_with_default_max_deliver
+--- PASS: TestJetStreamConsumerBackOff (0.02s)
+    --- PASS: TestJetStreamConsumerBackOff/backoff_with_max_deliver (0.00s)
+    --- PASS: TestJetStreamConsumerBackOff/backoff_with_max_deliver_equal (0.00s)
+    --- PASS: TestJetStreamConsumerBackOff/backoff_with_max_deliver_equal_to_zero (0.00s)
+    --- PASS: TestJetStreamConsumerBackOff/backoff_with_max_deliver_smaller (0.00s)
+    --- PASS: TestJetStreamConsumerBackOff/backoff_with_default_max_deliver (0.00s)
+=== RUN   TestJetStreamConsumerDelete
+=== RUN   TestJetStreamConsumerDelete/single_server
+=== RUN   TestJetStreamConsumerDelete/clustered
+--- PASS: TestJetStreamConsumerDelete (0.36s)
+    --- PASS: TestJetStreamConsumerDelete/single_server (0.01s)
+    --- PASS: TestJetStreamConsumerDelete/clustered (0.35s)
+=== RUN   TestJetStreamConsumerFetchWithDrain
+    jetstream_consumer_test.go:1138: 
+--- SKIP: TestJetStreamConsumerFetchWithDrain (0.00s)
+=== RUN   TestJetStreamConsumerLongSubjectHang
+--- PASS: TestJetStreamConsumerLongSubjectHang (0.01s)
+=== RUN   TestJetStreamConsumerPedanticMode
+=== RUN   TestJetStreamConsumerPedanticMode/clustered_default_non_pedantic
+=== RUN   TestJetStreamConsumerPedanticMode/single_default_non_pedantic
+=== RUN   TestJetStreamConsumerPedanticMode/clustered_default_pedantic_inactive_threshold
+=== RUN   TestJetStreamConsumerPedanticMode/single_default_pedantic_inactive_threshold
+=== RUN   TestJetStreamConsumerPedanticMode/clustered_default_pedantic_max_ack_pending
+=== RUN   TestJetStreamConsumerPedanticMode/single_default_pedantic_max_ack_pending
+=== RUN   TestJetStreamConsumerPedanticMode/clustered_pedantic_backoff_no_ack_wait
+=== RUN   TestJetStreamConsumerPedanticMode/single_pedantic_backoff_no_ack_wait
+=== RUN   TestJetStreamConsumerPedanticMode/clustered_backoff_no_ack_wait
+=== RUN   TestJetStreamConsumerPedanticMode/single_backoff_no_ack_wait
+=== RUN   TestJetStreamConsumerPedanticMode/clustered_max_batch_requests
+=== RUN   TestJetStreamConsumerPedanticMode/single_max_batch_requests
+=== RUN   TestJetStreamConsumerPedanticMode/clustered_pedantic_max_batch_requests
+=== RUN   TestJetStreamConsumerPedanticMode/single_pedantic_max_batch_requests
+--- PASS: TestJetStreamConsumerPedanticMode (4.31s)
+    --- PASS: TestJetStreamConsumerPedanticMode/clustered_default_non_pedantic (0.35s)
+    --- PASS: TestJetStreamConsumerPedanticMode/single_default_non_pedantic (0.01s)
+    --- PASS: TestJetStreamConsumerPedanticMode/clustered_default_pedantic_inactive_threshold (0.28s)
+    --- PASS: TestJetStreamConsumerPedanticMode/single_default_pedantic_inactive_threshold (0.01s)
+    --- PASS: TestJetStreamConsumerPedanticMode/clustered_default_pedantic_max_ack_pending (0.28s)
+    --- PASS: TestJetStreamConsumerPedanticMode/single_default_pedantic_max_ack_pending (0.01s)
+    --- PASS: TestJetStreamConsumerPedanticMode/clustered_pedantic_backoff_no_ack_wait (2.38s)
+    --- PASS: TestJetStreamConsumerPedanticMode/single_pedantic_backoff_no_ack_wait (0.01s)
+    --- PASS: TestJetStreamConsumerPedanticMode/clustered_backoff_no_ack_wait (0.35s)
+    --- PASS: TestJetStreamConsumerPedanticMode/single_backoff_no_ack_wait (0.01s)
+    --- PASS: TestJetStreamConsumerPedanticMode/clustered_max_batch_requests (0.35s)
+    --- PASS: TestJetStreamConsumerPedanticMode/single_max_batch_requests (0.01s)
+    --- PASS: TestJetStreamConsumerPedanticMode/clustered_pedantic_max_batch_requests (0.28s)
+    --- PASS: TestJetStreamConsumerPedanticMode/single_pedantic_max_batch_requests (0.01s)
+=== RUN   TestJetStreamConsumerStuckAckPending
+--- PASS: TestJetStreamConsumerStuckAckPending (17.33s)
+=== RUN   TestJetStreamConsumerPinned
+--- PASS: TestJetStreamConsumerPinned (12.55s)
+=== RUN   TestJetStreamConsumerPinnedPlainRequestNoPanic
+--- PASS: TestJetStreamConsumerPinnedPlainRequestNoPanic (0.01s)
+=== RUN   TestJetStreamConsumerPinnedUnsetsAfterAtMostPinnedTTL
+=== RUN   TestJetStreamConsumerPinnedUnsetsAfterAtMostPinnedTTL/Publish
+=== RUN   TestJetStreamConsumerPinnedUnsetsAfterAtMostPinnedTTL/NoMessages
+--- PASS: TestJetStreamConsumerPinnedUnsetsAfterAtMostPinnedTTL (4.02s)
+    --- PASS: TestJetStreamConsumerPinnedUnsetsAfterAtMostPinnedTTL/Publish (2.01s)
+    --- PASS: TestJetStreamConsumerPinnedUnsetsAfterAtMostPinnedTTL/NoMessages (2.01s)
+=== RUN   TestJetStreamConsumerPinnedUnsubscribeOnPinned
+--- PASS: TestJetStreamConsumerPinnedUnsubscribeOnPinned (1.06s)
+=== RUN   TestJetStreamConsumerUnpinNoMessages
+--- PASS: TestJetStreamConsumerUnpinNoMessages (1.08s)
+=== RUN   TestJetStreamConsumerUnpinPickDifferentRequest
+--- PASS: TestJetStreamConsumerUnpinPickDifferentRequest (2.07s)
+=== RUN   TestJetStreamConsumerPinnedTTL
+--- PASS: TestJetStreamConsumerPinnedTTL (6.01s)
+=== RUN   TestJetStreamConsumerUnpin
+=== RUN   TestJetStreamConsumerUnpin/unpin_non-existing_group
+=== RUN   TestJetStreamConsumerUnpin/unpin_non-existing_group_clustered
+=== RUN   TestJetStreamConsumerUnpin/unpin_on_missing_stream
+=== RUN   TestJetStreamConsumerUnpin/unpin_on_missing_stream_clustered
+=== RUN   TestJetStreamConsumerUnpin/unpin_on_missing_consumer
+=== RUN   TestJetStreamConsumerUnpin/unpin_on_missing_consumer_clustered
+=== RUN   TestJetStreamConsumerUnpin/unpin_missing_group
+=== RUN   TestJetStreamConsumerUnpin/unpin_missing_group_clustered
+=== RUN   TestJetStreamConsumerUnpin/unpin_bad_group_name
+=== RUN   TestJetStreamConsumerUnpin/unpin_bad_group_name_clustered
+=== RUN   TestJetStreamConsumerUnpin/ok_unpin
+=== RUN   TestJetStreamConsumerUnpin/ok_unpin_clustered
+--- PASS: TestJetStreamConsumerUnpin (0.78s)
+    --- PASS: TestJetStreamConsumerUnpin/unpin_non-existing_group (0.00s)
+    --- PASS: TestJetStreamConsumerUnpin/unpin_non-existing_group_clustered (0.00s)
+    --- PASS: TestJetStreamConsumerUnpin/unpin_on_missing_stream (0.00s)
+    --- PASS: TestJetStreamConsumerUnpin/unpin_on_missing_stream_clustered (0.00s)
+    --- PASS: TestJetStreamConsumerUnpin/unpin_on_missing_consumer (0.00s)
+    --- PASS: TestJetStreamConsumerUnpin/unpin_on_missing_consumer_clustered (0.00s)
+    --- PASS: TestJetStreamConsumerUnpin/unpin_missing_group (0.00s)
+    --- PASS: TestJetStreamConsumerUnpin/unpin_missing_group_clustered (0.00s)
+    --- PASS: TestJetStreamConsumerUnpin/unpin_bad_group_name (0.00s)
+    --- PASS: TestJetStreamConsumerUnpin/unpin_bad_group_name_clustered (0.00s)
+    --- PASS: TestJetStreamConsumerUnpin/ok_unpin (0.00s)
+    --- PASS: TestJetStreamConsumerUnpin/ok_unpin_clustered (0.00s)
+=== RUN   TestJetStreamConsumerPinnedStandbyMaxBytesNotEroded
+--- PASS: TestJetStreamConsumerPinnedStandbyMaxBytesNotEroded (0.83s)
+=== RUN   TestJetStreamConsumerPinnedMaxBytesRejectDoesNotOrphanPin
+--- PASS: TestJetStreamConsumerPinnedMaxBytesRejectDoesNotOrphanPin (0.01s)
+=== RUN   TestJetStreamConsumerWithPriorityGroups
+=== RUN   TestJetStreamConsumerWithPriorityGroups/Pinned_Consumer_with_Priority_Group
+=== RUN   TestJetStreamConsumerWithPriorityGroups/Pinned_Consumer_with_Priority_Group,_clustered
+=== RUN   TestJetStreamConsumerWithPriorityGroups/Overflow_Consumer_with_Priority_Group
+=== RUN   TestJetStreamConsumerWithPriorityGroups/Overflow_Consumer_with_Priority_Group,_clustered
+=== RUN   TestJetStreamConsumerWithPriorityGroups/Pinned_Consumer_without_Priority_Group
+=== RUN   TestJetStreamConsumerWithPriorityGroups/Pinned_Consumer_without_Priority_Group,_clustered
+=== RUN   TestJetStreamConsumerWithPriorityGroups/Overflow_Consumer_without_Priority_Group
+=== RUN   TestJetStreamConsumerWithPriorityGroups/Overflow_Consumer_without_Priority_Group,_clustered
+=== RUN   TestJetStreamConsumerWithPriorityGroups/Pinned_Consumer_with_empty_Priority_Group
+=== RUN   TestJetStreamConsumerWithPriorityGroups/Pinned_Consumer_with_empty_Priority_Group,_clustered
+=== RUN   TestJetStreamConsumerWithPriorityGroups/Pinned_Consumer_with_empty_Priority_Group#01
+=== RUN   TestJetStreamConsumerWithPriorityGroups/Pinned_Consumer_with_empty_Priority_Group,_clustered#01
+=== RUN   TestJetStreamConsumerWithPriorityGroups/Consumer_with_`none`_policy_priority_and_no_pinned_TTL_set
+=== RUN   TestJetStreamConsumerWithPriorityGroups/Consumer_with_`none`_policy_priority_and_Priority_Group_set
+=== RUN   TestJetStreamConsumerWithPriorityGroups/Push_consumer_with_Priority_Group
+--- PASS: TestJetStreamConsumerWithPriorityGroups (0.64s)
+    --- PASS: TestJetStreamConsumerWithPriorityGroups/Pinned_Consumer_with_Priority_Group (0.00s)
+    --- PASS: TestJetStreamConsumerWithPriorityGroups/Pinned_Consumer_with_Priority_Group,_clustered (0.07s)
+    --- PASS: TestJetStreamConsumerWithPriorityGroups/Overflow_Consumer_with_Priority_Group (0.00s)
+    --- PASS: TestJetStreamConsumerWithPriorityGroups/Overflow_Consumer_with_Priority_Group,_clustered (0.07s)
+    --- PASS: TestJetStreamConsumerWithPriorityGroups/Pinned_Consumer_without_Priority_Group (0.00s)
+    --- PASS: TestJetStreamConsumerWithPriorityGroups/Pinned_Consumer_without_Priority_Group,_clustered (0.00s)
+    --- PASS: TestJetStreamConsumerWithPriorityGroups/Overflow_Consumer_without_Priority_Group (0.00s)
+    --- PASS: TestJetStreamConsumerWithPriorityGroups/Overflow_Consumer_without_Priority_Group,_clustered (0.00s)
+    --- PASS: TestJetStreamConsumerWithPriorityGroups/Pinned_Consumer_with_empty_Priority_Group (0.00s)
+    --- PASS: TestJetStreamConsumerWithPriorityGroups/Pinned_Consumer_with_empty_Priority_Group,_clustered (0.00s)
+    --- PASS: TestJetStreamConsumerWithPriorityGroups/Pinned_Consumer_with_empty_Priority_Group#01 (0.00s)
+    --- PASS: TestJetStreamConsumerWithPriorityGroups/Pinned_Consumer_with_empty_Priority_Group,_clustered#01 (0.00s)
+    --- PASS: TestJetStreamConsumerWithPriorityGroups/Consumer_with_`none`_policy_priority_and_no_pinned_TTL_set (0.00s)
+    --- PASS: TestJetStreamConsumerWithPriorityGroups/Consumer_with_`none`_policy_priority_and_Priority_Group_set (0.00s)
+    --- PASS: TestJetStreamConsumerWithPriorityGroups/Push_consumer_with_Priority_Group (0.00s)
+=== RUN   TestJetStreamConsumerPriorityPullRequests
+=== RUN   TestJetStreamConsumerPriorityPullRequests/Pinned_Pull_Request
+=== RUN   TestJetStreamConsumerPriorityPullRequests/Pinned_Pull_Request,_no_group
+=== RUN   TestJetStreamConsumerPriorityPullRequests/Pinned_Pull_Request,_bad_group
+=== RUN   TestJetStreamConsumerPriorityPullRequests/Pinned_Pull_Request,_against_Overflow
+=== RUN   TestJetStreamConsumerPriorityPullRequests/Pinned_Pull_Request,_against_standard_consumer
+=== RUN   TestJetStreamConsumerPriorityPullRequests/Overflow_Pull_Request,_overflow_below_threshold
+=== RUN   TestJetStreamConsumerPriorityPullRequests/Overflow_Pull_Request,_overflow_above_threshold
+=== RUN   TestJetStreamConsumerPriorityPullRequests/Overflow_Pull_Request,_minPending_OR_minAckPending_above_threshold
+=== RUN   TestJetStreamConsumerPriorityPullRequests/Overflow_Pull_Request,_against_pinned
+=== RUN   TestJetStreamConsumerPriorityPullRequests/Overflow_Pull_Request,_against_standard_consumer
+--- PASS: TestJetStreamConsumerPriorityPullRequests (5.25s)
+    --- PASS: TestJetStreamConsumerPriorityPullRequests/Pinned_Pull_Request (0.00s)
+    --- PASS: TestJetStreamConsumerPriorityPullRequests/Pinned_Pull_Request,_no_group (0.00s)
+    --- PASS: TestJetStreamConsumerPriorityPullRequests/Pinned_Pull_Request,_bad_group (0.00s)
+    --- PASS: TestJetStreamConsumerPriorityPullRequests/Pinned_Pull_Request,_against_Overflow (0.00s)
+    --- PASS: TestJetStreamConsumerPriorityPullRequests/Pinned_Pull_Request,_against_standard_consumer (0.00s)
+    --- PASS: TestJetStreamConsumerPriorityPullRequests/Overflow_Pull_Request,_overflow_below_threshold (5.00s)
+    --- PASS: TestJetStreamConsumerPriorityPullRequests/Overflow_Pull_Request,_overflow_above_threshold (0.00s)
+    --- PASS: TestJetStreamConsumerPriorityPullRequests/Overflow_Pull_Request,_minPending_OR_minAckPending_above_threshold (0.00s)
+    --- PASS: TestJetStreamConsumerPriorityPullRequests/Overflow_Pull_Request,_against_pinned (0.00s)
+    --- PASS: TestJetStreamConsumerPriorityPullRequests/Overflow_Pull_Request,_against_standard_consumer (0.00s)
+=== RUN   TestJetStreamConsumerInvalidPriorityGroupRequestNotServed
+=== RUN   TestJetStreamConsumerInvalidPriorityGroupRequestNotServed/overflow
+=== RUN   TestJetStreamConsumerInvalidPriorityGroupRequestNotServed/pinned_request
+=== RUN   TestJetStreamConsumerInvalidPriorityGroupRequestNotServed/priority_outside_range
+--- PASS: TestJetStreamConsumerInvalidPriorityGroupRequestNotServed (2.27s)
+    --- PASS: TestJetStreamConsumerInvalidPriorityGroupRequestNotServed/overflow (0.75s)
+    --- PASS: TestJetStreamConsumerInvalidPriorityGroupRequestNotServed/pinned_request (0.75s)
+    --- PASS: TestJetStreamConsumerInvalidPriorityGroupRequestNotServed/priority_outside_range (0.75s)
+=== RUN   TestJetStreamConsumerOverflow
+--- PASS: TestJetStreamConsumerOverflow (3.10s)
+=== RUN   TestJetStreamConsumerMultipleFitersWithStartDate
+=== RUN   TestJetStreamConsumerMultipleFitersWithStartDate/Single-Filter-first-sequence
+=== RUN   TestJetStreamConsumerMultipleFitersWithStartDate/Multiple-Filter-first-sequence
+=== RUN   TestJetStreamConsumerMultipleFitersWithStartDate/Multiple-Filters-second-subject
+=== RUN   TestJetStreamConsumerMultipleFitersWithStartDate/Multiple-Filters-first-last-subject
+=== RUN   TestJetStreamConsumerMultipleFitersWithStartDate/Multiple-Filters-in-future
+--- PASS: TestJetStreamConsumerMultipleFitersWithStartDate (0.02s)
+    --- PASS: TestJetStreamConsumerMultipleFitersWithStartDate/Single-Filter-first-sequence (0.00s)
+    --- PASS: TestJetStreamConsumerMultipleFitersWithStartDate/Multiple-Filter-first-sequence (0.00s)
+    --- PASS: TestJetStreamConsumerMultipleFitersWithStartDate/Multiple-Filters-second-subject (0.00s)
+    --- PASS: TestJetStreamConsumerMultipleFitersWithStartDate/Multiple-Filters-first-last-subject (0.00s)
+    --- PASS: TestJetStreamConsumerMultipleFitersWithStartDate/Multiple-Filters-in-future (0.00s)
+=== RUN   TestJetStreamConsumerBackoffNotRespectedWithMultipleInflightRedeliveries
+--- PASS: TestJetStreamConsumerBackoffNotRespectedWithMultipleInflightRedeliveries (8.02s)
+=== RUN   TestJetStreamConsumerBackoffWhenBackoffLengthIsEqualToMaxDeliverConfig
+--- PASS: TestJetStreamConsumerBackoffWhenBackoffLengthIsEqualToMaxDeliverConfig (3.02s)
+=== RUN   TestJetStreamConsumerRetryAckAfterTimeout
+=== RUN   TestJetStreamConsumerRetryAckAfterTimeout/AckExplicit
+=== RUN   TestJetStreamConsumerRetryAckAfterTimeout/AckAll
+--- PASS: TestJetStreamConsumerRetryAckAfterTimeout (0.05s)
+    --- PASS: TestJetStreamConsumerRetryAckAfterTimeout/AckExplicit (0.03s)
+    --- PASS: TestJetStreamConsumerRetryAckAfterTimeout/AckAll (0.02s)
+=== RUN   TestJetStreamConsumerSwitchLeaderDuringInflightAck
+--- PASS: TestJetStreamConsumerSwitchLeaderDuringInflightAck (2.01s)
+=== RUN   TestJetStreamConsumerMessageDeletedDuringRedelivery
+=== RUN   TestJetStreamConsumerMessageDeletedDuringRedelivery/Memory
+=== RUN   TestJetStreamConsumerMessageDeletedDuringRedelivery/File
+--- PASS: TestJetStreamConsumerMessageDeletedDuringRedelivery (0.04s)
+    --- PASS: TestJetStreamConsumerMessageDeletedDuringRedelivery/Memory (0.01s)
+    --- PASS: TestJetStreamConsumerMessageDeletedDuringRedelivery/File (0.02s)
+=== RUN   TestJetStreamConsumerDeliveryCount
+--- PASS: TestJetStreamConsumerDeliveryCount (0.26s)
+=== RUN   TestJetStreamConsumerCreate
+=== RUN   TestJetStreamConsumerCreate/MemoryStore
+=== RUN   TestJetStreamConsumerCreate/FileStore
+--- PASS: TestJetStreamConsumerCreate (0.02s)
+    --- PASS: TestJetStreamConsumerCreate/MemoryStore (0.01s)
+    --- PASS: TestJetStreamConsumerCreate/FileStore (0.01s)
+=== RUN   TestJetStreamConsumerAndStreamDescriptions
+--- PASS: TestJetStreamConsumerAndStreamDescriptions (0.00s)
+=== RUN   TestJetStreamConsumerWithNameAndDurable
+--- PASS: TestJetStreamConsumerWithNameAndDurable (0.00s)
+=== RUN   TestJetStreamConsumerWithStartTime
+=== RUN   TestJetStreamConsumerWithStartTime/MemoryStore
+=== RUN   TestJetStreamConsumerWithStartTime/FileStore
+--- PASS: TestJetStreamConsumerWithStartTime (0.17s)
+    --- PASS: TestJetStreamConsumerWithStartTime/MemoryStore (0.08s)
+    --- PASS: TestJetStreamConsumerWithStartTime/FileStore (0.10s)
+=== RUN   TestJetStreamConsumerWithMultipleStartOptions
+=== RUN   TestJetStreamConsumerWithMultipleStartOptions/MemoryStore
+=== RUN   TestJetStreamConsumerWithMultipleStartOptions/FileStore
+--- PASS: TestJetStreamConsumerWithMultipleStartOptions (0.01s)
+    --- PASS: TestJetStreamConsumerWithMultipleStartOptions/MemoryStore (0.00s)
+    --- PASS: TestJetStreamConsumerWithMultipleStartOptions/FileStore (0.00s)
+=== RUN   TestJetStreamConsumerMaxDeliveries
+=== RUN   TestJetStreamConsumerMaxDeliveries/MemoryStore
+=== RUN   TestJetStreamConsumerMaxDeliveries/FileStore
+--- PASS: TestJetStreamConsumerMaxDeliveries (0.16s)
+    --- PASS: TestJetStreamConsumerMaxDeliveries/MemoryStore (0.08s)
+    --- PASS: TestJetStreamConsumerMaxDeliveries/FileStore (0.08s)
+=== RUN   TestJetStreamConsumerSingleTokenSubject
+--- PASS: TestJetStreamConsumerSingleTokenSubject (0.01s)
+=== RUN   TestJetStreamConsumerPullDelayedFirstPullWithReplayOriginal
+=== RUN   TestJetStreamConsumerPullDelayedFirstPullWithReplayOriginal/MemoryStore
+=== RUN   TestJetStreamConsumerPullDelayedFirstPullWithReplayOriginal/FileStore
+--- PASS: TestJetStreamConsumerPullDelayedFirstPullWithReplayOriginal (0.52s)
+    --- PASS: TestJetStreamConsumerPullDelayedFirstPullWithReplayOriginal/MemoryStore (0.26s)
+    --- PASS: TestJetStreamConsumerPullDelayedFirstPullWithReplayOriginal/FileStore (0.27s)
+=== RUN   TestJetStreamConsumerAckFloorFill
+=== RUN   TestJetStreamConsumerAckFloorFill/MemoryStore
+=== RUN   TestJetStreamConsumerAckFloorFill/FileStore
+--- PASS: TestJetStreamConsumerAckFloorFill (0.02s)
+    --- PASS: TestJetStreamConsumerAckFloorFill/MemoryStore (0.01s)
+    --- PASS: TestJetStreamConsumerAckFloorFill/FileStore (0.01s)
+=== RUN   TestJetStreamConsumerAckAck
+--- PASS: TestJetStreamConsumerAckAck (0.01s)
+=== RUN   TestJetStreamConsumerAckV1NameWithPercent
+--- PASS: TestJetStreamConsumerAckV1NameWithPercent (0.01s)
+=== RUN   TestJetStreamConsumerAckV2NameWithPercent
+--- PASS: TestJetStreamConsumerAckV2NameWithPercent (0.01s)
+=== RUN   TestJetStreamConsumerRateLimit
+--- PASS: TestJetStreamConsumerRateLimit (0.78s)
+=== RUN   TestJetStreamConsumerEphemeralRecoveryAfterServerRestart
+--- PASS: TestJetStreamConsumerEphemeralRecoveryAfterServerRestart (0.18s)
+=== RUN   TestJetStreamConsumerMaxDeliveryAndServerRestart
+--- PASS: TestJetStreamConsumerMaxDeliveryAndServerRestart (0.57s)
+=== RUN   TestJetStreamConsumerDeleteAndServerRestart
+--- PASS: TestJetStreamConsumerDeleteAndServerRestart (0.02s)
+=== RUN   TestJetStreamConsumerDurableReconnectWithOnlyPending
+=== RUN   TestJetStreamConsumerDurableReconnectWithOnlyPending/MemoryStore
+=== RUN   TestJetStreamConsumerDurableReconnectWithOnlyPending/FileStore
+--- PASS: TestJetStreamConsumerDurableReconnectWithOnlyPending (0.14s)
+    --- PASS: TestJetStreamConsumerDurableReconnectWithOnlyPending/MemoryStore (0.07s)
+    --- PASS: TestJetStreamConsumerDurableReconnectWithOnlyPending/FileStore (0.07s)
+=== RUN   TestJetStreamConsumerDurableFilteredSubjectReconnect
+=== RUN   TestJetStreamConsumerDurableFilteredSubjectReconnect/MemoryStore
+=== RUN   TestJetStreamConsumerDurableFilteredSubjectReconnect/FileStore
+--- PASS: TestJetStreamConsumerDurableFilteredSubjectReconnect (0.26s)
+    --- PASS: TestJetStreamConsumerDurableFilteredSubjectReconnect/MemoryStore (0.13s)
+    --- PASS: TestJetStreamConsumerDurableFilteredSubjectReconnect/FileStore (0.13s)
+=== RUN   TestJetStreamConsumerInactiveNoDeadlock
+=== RUN   TestJetStreamConsumerInactiveNoDeadlock/MemoryStore
+=== RUN   TestJetStreamConsumerInactiveNoDeadlock/FileStore
+--- PASS: TestJetStreamConsumerInactiveNoDeadlock (2.35s)
+    --- PASS: TestJetStreamConsumerInactiveNoDeadlock/MemoryStore (1.14s)
+    --- PASS: TestJetStreamConsumerInactiveNoDeadlock/FileStore (1.20s)
+=== RUN   TestJetStreamConsumerReconnect
+=== RUN   TestJetStreamConsumerReconnect/MemoryStore
+=== RUN   TestJetStreamConsumerReconnect/FileStore
+--- PASS: TestJetStreamConsumerReconnect (0.12s)
+    --- PASS: TestJetStreamConsumerReconnect/MemoryStore (0.06s)
+    --- PASS: TestJetStreamConsumerReconnect/FileStore (0.06s)
+=== RUN   TestJetStreamConsumerDurableReconnect
+=== RUN   TestJetStreamConsumerDurableReconnect/MemoryStore
+=== RUN   TestJetStreamConsumerDurableReconnect/FileStore
+--- PASS: TestJetStreamConsumerDurableReconnect (0.14s)
+    --- PASS: TestJetStreamConsumerDurableReconnect/MemoryStore (0.07s)
+    --- PASS: TestJetStreamConsumerDurableReconnect/FileStore (0.07s)
+=== RUN   TestJetStreamConsumerReplayRate
+=== RUN   TestJetStreamConsumerReplayRate/MemoryStore
+=== RUN   TestJetStreamConsumerReplayRate/FileStore
+--- PASS: TestJetStreamConsumerReplayRate (1.26s)
+    --- PASS: TestJetStreamConsumerReplayRate/MemoryStore (0.68s)
+    --- PASS: TestJetStreamConsumerReplayRate/FileStore (0.58s)
+=== RUN   TestJetStreamConsumerReplayRateNoAck
+=== RUN   TestJetStreamConsumerReplayRateNoAck/MemoryStore
+=== RUN   TestJetStreamConsumerReplayRateNoAck/FileStore
+--- PASS: TestJetStreamConsumerReplayRateNoAck (0.23s)
+    --- PASS: TestJetStreamConsumerReplayRateNoAck/MemoryStore (0.12s)
+    --- PASS: TestJetStreamConsumerReplayRateNoAck/FileStore (0.10s)
+=== RUN   TestJetStreamConsumerReplayQuit
+=== RUN   TestJetStreamConsumerReplayQuit/MemoryStore
+=== RUN   TestJetStreamConsumerReplayQuit/FileStore
+--- PASS: TestJetStreamConsumerReplayQuit (0.33s)
+    --- PASS: TestJetStreamConsumerReplayQuit/MemoryStore (0.16s)
+    --- PASS: TestJetStreamConsumerReplayQuit/FileStore (0.17s)
+=== RUN   TestJetStreamConsumerPerf
+--- SKIP: TestJetStreamConsumerPerf (0.00s)
+=== RUN   TestJetStreamConsumerAckFileStorePerf
+--- SKIP: TestJetStreamConsumerAckFileStorePerf (0.00s)
+=== RUN   TestJetStreamConsumerFilterSubject
+--- PASS: TestJetStreamConsumerFilterSubject (0.01s)
+=== RUN   TestJetStreamConsumerUpdateRedelivery
+=== RUN   TestJetStreamConsumerUpdateRedelivery/MemoryStore
+=== RUN   TestJetStreamConsumerUpdateRedelivery/FileStore
+--- PASS: TestJetStreamConsumerUpdateRedelivery (1.06s)
+    --- PASS: TestJetStreamConsumerUpdateRedelivery/MemoryStore (0.53s)
+    --- PASS: TestJetStreamConsumerUpdateRedelivery/FileStore (0.53s)
+=== RUN   TestJetStreamConsumerMaxAckPending
+=== RUN   TestJetStreamConsumerMaxAckPending/MemoryStore
+=== RUN   TestJetStreamConsumerMaxAckPending/FileStore
+--- PASS: TestJetStreamConsumerMaxAckPending (0.16s)
+    --- PASS: TestJetStreamConsumerMaxAckPending/MemoryStore (0.07s)
+    --- PASS: TestJetStreamConsumerMaxAckPending/FileStore (0.09s)
+=== RUN   TestJetStreamConsumerPullMaxAckPending
+=== RUN   TestJetStreamConsumerPullMaxAckPending/MemoryStore
+=== RUN   TestJetStreamConsumerPullMaxAckPending/FileStore
+--- PASS: TestJetStreamConsumerPullMaxAckPending (0.06s)
+    --- PASS: TestJetStreamConsumerPullMaxAckPending/MemoryStore (0.03s)
+    --- PASS: TestJetStreamConsumerPullMaxAckPending/FileStore (0.03s)
+=== RUN   TestJetStreamConsumerPullMaxAckPendingRedeliveries
+=== RUN   TestJetStreamConsumerPullMaxAckPendingRedeliveries/MemoryStore
+=== RUN   TestJetStreamConsumerPullMaxAckPendingRedeliveries/FileStore
+--- PASS: TestJetStreamConsumerPullMaxAckPendingRedeliveries (0.20s)
+    --- PASS: TestJetStreamConsumerPullMaxAckPendingRedeliveries/MemoryStore (0.10s)
+    --- PASS: TestJetStreamConsumerPullMaxAckPendingRedeliveries/FileStore (0.10s)
+=== RUN   TestJetStreamConsumerBadNumPending
+--- PASS: TestJetStreamConsumerBadNumPending (0.23s)
+=== RUN   TestJetStreamConsumerCleanupWithRetentionPolicy
+--- PASS: TestJetStreamConsumerCleanupWithRetentionPolicy (0.03s)
+=== RUN   TestJetStreamConsumerPendingBugWithKV
+=== RUN   TestJetStreamConsumerPendingBugWithKV/MemoryStore
+=== RUN   TestJetStreamConsumerPendingBugWithKV/FileStore
+--- PASS: TestJetStreamConsumerPendingBugWithKV (0.01s)
+    --- PASS: TestJetStreamConsumerPendingBugWithKV/MemoryStore (0.01s)
+    --- PASS: TestJetStreamConsumerPendingBugWithKV/FileStore (0.01s)
+=== RUN   TestJetStreamConsumerBadCreateErr
+--- PASS: TestJetStreamConsumerBadCreateErr (0.01s)
+=== RUN   TestJetStreamConsumerPushBound
+--- PASS: TestJetStreamConsumerPushBound (0.01s)
+=== RUN   TestJetStreamConsumerInternalClientLeak
+--- PASS: TestJetStreamConsumerInternalClientLeak (0.53s)
+=== RUN   TestJetStreamConsumerEventingRaceOnShutdown
+--- PASS: TestJetStreamConsumerEventingRaceOnShutdown (0.06s)
+=== RUN   TestJetStreamConsumerNoMsgPayload
+--- PASS: TestJetStreamConsumerNoMsgPayload (0.02s)
+=== RUN   TestJetStreamConsumerUpdateSurvival
+--- PASS: TestJetStreamConsumerUpdateSurvival (0.01s)
+=== RUN   TestJetStreamConsumerPendingCountWithRedeliveries
+--- PASS: TestJetStreamConsumerPendingCountWithRedeliveries (0.12s)
+=== RUN   TestJetStreamConsumerPullHeartBeats
+--- PASS: TestJetStreamConsumerPullHeartBeats (0.73s)
+=== RUN   TestJetStreamConsumerAckSampling
+--- PASS: TestJetStreamConsumerAckSampling (0.13s)
+=== RUN   TestJetStreamConsumerAckSamplingSpecifiedUsingUpdateConsumer
+--- PASS: TestJetStreamConsumerAckSamplingSpecifiedUsingUpdateConsumer (0.02s)
+=== RUN   TestJetStreamConsumerMaxDeliverUpdate
+--- PASS: TestJetStreamConsumerMaxDeliverUpdate (0.21s)
+=== RUN   TestJetStreamConsumerStreamUpdate
+=== RUN   TestJetStreamConsumerStreamUpdate/clustered
+=== RUN   TestJetStreamConsumerStreamUpdate/clustered/r3
+=== RUN   TestJetStreamConsumerStreamUpdate/clustered/r1
+=== RUN   TestJetStreamConsumerStreamUpdate/single
+--- PASS: TestJetStreamConsumerStreamUpdate (0.37s)
+    --- PASS: TestJetStreamConsumerStreamUpdate/clustered (0.36s)
+        --- PASS: TestJetStreamConsumerStreamUpdate/clustered/r3 (0.14s)
+        --- PASS: TestJetStreamConsumerStreamUpdate/clustered/r1 (0.01s)
+    --- PASS: TestJetStreamConsumerStreamUpdate/single (0.01s)
+=== RUN   TestJetStreamConsumerDeliverNewNotConsumingBeforeRestart
+--- PASS: TestJetStreamConsumerDeliverNewNotConsumingBeforeRestart (0.33s)
+=== RUN   TestJetStreamConsumerNumPendingWithMaxPerSubjectGreaterThanOne
+=== RUN   TestJetStreamConsumerNumPendingWithMaxPerSubjectGreaterThanOne/MemoryStore
+=== RUN   TestJetStreamConsumerNumPendingWithMaxPerSubjectGreaterThanOne/FileStore
+--- PASS: TestJetStreamConsumerNumPendingWithMaxPerSubjectGreaterThanOne (0.01s)
+    --- PASS: TestJetStreamConsumerNumPendingWithMaxPerSubjectGreaterThanOne/MemoryStore (0.00s)
+    --- PASS: TestJetStreamConsumerNumPendingWithMaxPerSubjectGreaterThanOne/FileStore (0.00s)
+=== RUN   TestJetStreamConsumerAndStreamNamesWithPathSeparators
+--- PASS: TestJetStreamConsumerAndStreamNamesWithPathSeparators (0.01s)
+=== RUN   TestJetStreamConsumerUpdateFilterSubject
+--- PASS: TestJetStreamConsumerUpdateFilterSubject (0.02s)
+=== RUN   TestJetStreamConsumerPullConsumerFIFO
+--- PASS: TestJetStreamConsumerPullConsumerFIFO (0.13s)
+=== RUN   TestJetStreamConsumerPullConsumerOneShotOnMaxAckLimit
+--- PASS: TestJetStreamConsumerPullConsumerOneShotOnMaxAckLimit (1.81s)
+=== RUN   TestJetStreamConsumerDeliverNewMaxRedeliveriesAndServerRestart
+--- PASS: TestJetStreamConsumerDeliverNewMaxRedeliveriesAndServerRestart (1.43s)
+=== RUN   TestJetStreamConsumerPendingLowerThanStreamFirstSeq
+--- PASS: TestJetStreamConsumerPendingLowerThanStreamFirstSeq (0.03s)
+=== RUN   TestJetStreamConsumerEOFBugNewFileStore
+--- PASS: TestJetStreamConsumerEOFBugNewFileStore (0.16s)
+=== RUN   TestJetStreamConsumerMultipleSubjectsLast
+--- PASS: TestJetStreamConsumerMultipleSubjectsLast (0.51s)
+=== RUN   TestJetStreamConsumerMultipleSubjectsLastPerSubject
+--- PASS: TestJetStreamConsumerMultipleSubjectsLastPerSubject (0.03s)
+=== RUN   TestJetStreamConsumerMultipleSubjects
+--- PASS: TestJetStreamConsumerMultipleSubjects (0.03s)
+=== RUN   TestJetStreamConsumerMultipleSubjectsWithEmpty
+--- PASS: TestJetStreamConsumerMultipleSubjectsWithEmpty (0.02s)
+=== RUN   TestJetStreamConsumerOverlappingSubjects
+--- PASS: TestJetStreamConsumerOverlappingSubjects (0.01s)
+=== RUN   TestJetStreamConsumerMultipleSubjectsAck
+--- PASS: TestJetStreamConsumerMultipleSubjectsAck (0.02s)
+=== RUN   TestJetStreamConsumerMultipleSubjectAndNewAPI
+--- PASS: TestJetStreamConsumerMultipleSubjectAndNewAPI (0.01s)
+=== RUN   TestJetStreamConsumerMultipleSubjectsWithAddedMessages
+--- PASS: TestJetStreamConsumerMultipleSubjectsWithAddedMessages (0.02s)
+=== RUN   TestJetStreamConsumerThreeFilters
+--- PASS: TestJetStreamConsumerThreeFilters (0.02s)
+=== RUN   TestJetStreamConsumerUpdateFilterSubjects
+--- PASS: TestJetStreamConsumerUpdateFilterSubjects (0.02s)
+=== RUN   TestJetStreamConsumerAndStreamMetadata
+--- PASS: TestJetStreamConsumerAndStreamMetadata (0.00s)
+=== RUN   TestJetStreamConsumerPurge
+--- PASS: TestJetStreamConsumerPurge (10.02s)
+=== RUN   TestJetStreamConsumerRollupMultiFilterDoesNotSkip
+--- PASS: TestJetStreamConsumerRollupMultiFilterDoesNotSkip (0.03s)
+=== RUN   TestJetStreamConsumerFilteredPurgeMultiFilterDoesNotSkip
+--- PASS: TestJetStreamConsumerFilteredPurgeMultiFilterDoesNotSkip (0.03s)
+=== RUN   TestJetStreamConsumerFilterUpdate
+--- PASS: TestJetStreamConsumerFilterUpdate (0.02s)
+=== RUN   TestJetStreamConsumerAckFloorWithExpired
+--- PASS: TestJetStreamConsumerAckFloorWithExpired (3.03s)
+=== RUN   TestJetStreamConsumerIsFiltered
+=== RUN   TestJetStreamConsumerIsFiltered/single_subject
+=== RUN   TestJetStreamConsumerIsFiltered/single_subject_filtered
+=== RUN   TestJetStreamConsumerIsFiltered/multi_subject_non_filtered
+=== RUN   TestJetStreamConsumerIsFiltered/multi_subject_filtered_wc
+=== RUN   TestJetStreamConsumerIsFiltered/multi_subject_filtered
+--- PASS: TestJetStreamConsumerIsFiltered (0.01s)
+    --- PASS: TestJetStreamConsumerIsFiltered/single_subject (0.00s)
+    --- PASS: TestJetStreamConsumerIsFiltered/single_subject_filtered (0.00s)
+    --- PASS: TestJetStreamConsumerIsFiltered/multi_subject_non_filtered (0.00s)
+    --- PASS: TestJetStreamConsumerIsFiltered/multi_subject_filtered_wc (0.00s)
+    --- PASS: TestJetStreamConsumerIsFiltered/multi_subject_filtered (0.00s)
+=== RUN   TestJetStreamConsumerWithFormattingSymbol
+--- PASS: TestJetStreamConsumerWithFormattingSymbol (0.01s)
+=== RUN   TestJetStreamConsumerDefaultsFromStream
+=== RUN   TestJetStreamConsumerDefaultsFromStream/InheritDefaultsFromStream
+=== RUN   TestJetStreamConsumerDefaultsFromStream/CreateConsumerErrorOnExceedMaxAckPending
+=== RUN   TestJetStreamConsumerDefaultsFromStream/CreateConsumerErrorOnExceedInactiveThreshold
+=== RUN   TestJetStreamConsumerDefaultsFromStream/UpdateStreamErrorOnViolateConsumerMaxAckPending
+=== RUN   TestJetStreamConsumerDefaultsFromStream/UpdateStreamErrorOnViolateConsumerInactiveThreshold
+=== RUN   TestJetStreamConsumerDefaultsFromStream/UpdateStreamSpuriousMaxAckPending
+=== RUN   TestJetStreamConsumerDefaultsFromStream/UpdateStreamClearInactiveThreshold
+--- PASS: TestJetStreamConsumerDefaultsFromStream (0.01s)
+    --- PASS: TestJetStreamConsumerDefaultsFromStream/InheritDefaultsFromStream (0.00s)
+    --- PASS: TestJetStreamConsumerDefaultsFromStream/CreateConsumerErrorOnExceedMaxAckPending (0.00s)
+    --- PASS: TestJetStreamConsumerDefaultsFromStream/CreateConsumerErrorOnExceedInactiveThreshold (0.00s)
+    --- PASS: TestJetStreamConsumerDefaultsFromStream/UpdateStreamErrorOnViolateConsumerMaxAckPending (0.00s)
+    --- PASS: TestJetStreamConsumerDefaultsFromStream/UpdateStreamErrorOnViolateConsumerInactiveThreshold (0.00s)
+    --- PASS: TestJetStreamConsumerDefaultsFromStream/UpdateStreamSpuriousMaxAckPending (0.00s)
+    --- PASS: TestJetStreamConsumerDefaultsFromStream/UpdateStreamClearInactiveThreshold (0.00s)
+=== RUN   TestJetStreamConsumerPendingForKV
+=== RUN   TestJetStreamConsumerPendingForKV/File
+=== RUN   TestJetStreamConsumerPendingForKV/Memory
+--- PASS: TestJetStreamConsumerPendingForKV (0.01s)
+    --- PASS: TestJetStreamConsumerPendingForKV/File (0.01s)
+    --- PASS: TestJetStreamConsumerPendingForKV/Memory (0.01s)
+=== RUN   TestJetStreamConsumerNakThenAckFloorMove
+--- PASS: TestJetStreamConsumerNakThenAckFloorMove (0.02s)
+=== RUN   TestJetStreamConsumerPauseViaConfig
+=== RUN   TestJetStreamConsumerPauseViaConfig/CreateShouldSucceed
+=== RUN   TestJetStreamConsumerPauseViaConfig/UpdateShouldFail
+--- PASS: TestJetStreamConsumerPauseViaConfig (0.01s)
+    --- PASS: TestJetStreamConsumerPauseViaConfig/CreateShouldSucceed (0.00s)
+    --- PASS: TestJetStreamConsumerPauseViaConfig/UpdateShouldFail (0.00s)
+=== RUN   TestJetStreamConsumerPauseViaEndpoint
+=== RUN   TestJetStreamConsumerPauseViaEndpoint/PullConsumer
+=== RUN   TestJetStreamConsumerPauseViaEndpoint/PushConsumer
+--- PASS: TestJetStreamConsumerPauseViaEndpoint (6.04s)
+    --- PASS: TestJetStreamConsumerPauseViaEndpoint/PullConsumer (3.01s)
+    --- PASS: TestJetStreamConsumerPauseViaEndpoint/PushConsumer (3.01s)
+=== RUN   TestJetStreamConsumerPauseResumeViaEndpoint
+--- PASS: TestJetStreamConsumerPauseResumeViaEndpoint (0.01s)
+=== RUN   TestJetStreamConsumerPauseMetadataRace
+--- PASS: TestJetStreamConsumerPauseMetadataRace (0.32s)
+=== RUN   TestJetStreamConsumerPauseHeartbeats
+--- PASS: TestJetStreamConsumerPauseHeartbeats (2.03s)
+=== RUN   TestJetStreamConsumerPauseAdvisories
+--- PASS: TestJetStreamConsumerPauseAdvisories (2.01s)
+=== RUN   TestJetStreamConsumerSurvivesRestart
+--- PASS: TestJetStreamConsumerSurvivesRestart (0.01s)
+=== RUN   TestJetStreamConsumerInfoNumPending
+--- PASS: TestJetStreamConsumerInfoNumPending (0.12s)
+=== RUN   TestJetStreamConsumerDontDecrementPendingCountOnSkippedMsg
+--- PASS: TestJetStreamConsumerDontDecrementPendingCountOnSkippedMsg (0.01s)
+=== RUN   TestJetStreamConsumerPendingCountAfterMsgAckAboveFloor
+--- PASS: TestJetStreamConsumerPendingCountAfterMsgAckAboveFloor (0.02s)
+=== RUN   TestJetStreamConsumerPullRemoveInterest
+--- PASS: TestJetStreamConsumerPullRemoveInterest (0.05s)
+=== RUN   TestJetStreamConsumerPullMaxWaitingOfOne
+--- PASS: TestJetStreamConsumerPullMaxWaitingOfOne (0.31s)
+=== RUN   TestJetStreamConsumerPullMaxWaitingOfOneWithHeartbeatInterval
+--- PASS: TestJetStreamConsumerPullMaxWaitingOfOneWithHeartbeatInterval (0.62s)
+=== RUN   TestJetStreamConsumerPullMaxWaiting
+--- PASS: TestJetStreamConsumerPullMaxWaiting (0.01s)
+=== RUN   TestJetStreamConsumerPullRequestCleanup
+--- PASS: TestJetStreamConsumerPullRequestCleanup (0.21s)
+=== RUN   TestJetStreamConsumerPullRequestMaximums
+--- PASS: TestJetStreamConsumerPullRequestMaximums (0.01s)
+=== RUN   TestJetStreamConsumerPullCrossAccountExpires
+--- PASS: TestJetStreamConsumerPullCrossAccountExpires (0.69s)
+=== RUN   TestJetStreamConsumerPullCrossAccountExpiresNoDataRace
+--- PASS: TestJetStreamConsumerPullCrossAccountExpiresNoDataRace (0.37s)
+=== RUN   TestJetStreamConsumerPullCrossAccountsAndLeafNodes
+--- PASS: TestJetStreamConsumerPullCrossAccountsAndLeafNodes (0.56s)
+=== RUN   TestJetStreamConsumerPullOneShotBehavior
+--- PASS: TestJetStreamConsumerPullOneShotBehavior (0.77s)
+=== RUN   TestJetStreamConsumerPullMultipleRequestsExpireOutOfOrder
+--- PASS: TestJetStreamConsumerPullMultipleRequestsExpireOutOfOrder (0.22s)
+=== RUN   TestJetStreamConsumerPullNoAck
+--- PASS: TestJetStreamConsumerPullNoAck (0.01s)
+=== RUN   TestJetStreamConsumerPullLastPerSubjectRedeliveries
+--- PASS: TestJetStreamConsumerPullLastPerSubjectRedeliveries (0.53s)
+=== RUN   TestJetStreamConsumerPullTimeoutHeaders
+--- PASS: TestJetStreamConsumerPullTimeoutHeaders (0.17s)
+=== RUN   TestJetStreamConsumerPullBatchCompleted
+--- PASS: TestJetStreamConsumerPullBatchCompleted (0.01s)
+=== RUN   TestJetStreamConsumerPullLargeBatchExpired
+--- PASS: TestJetStreamConsumerPullLargeBatchExpired (0.26s)
+=== RUN   TestJetStreamConsumerPullTimeout
+--- PASS: TestJetStreamConsumerPullTimeout (12.07s)
+=== RUN   TestJetStreamConsumerPullMaxBytes
+--- PASS: TestJetStreamConsumerPullMaxBytes (0.13s)
+=== RUN   TestJetStreamConsumerDeliverAllOverlappingFilterSubjects
+--- PASS: TestJetStreamConsumerDeliverAllOverlappingFilterSubjects (0.07s)
+=== RUN   TestJetStreamConsumerDeliverAllNonOverlappingFilterSubjects
+--- PASS: TestJetStreamConsumerDeliverAllNonOverlappingFilterSubjects (0.01s)
+=== RUN   TestJetStreamConsumerDeliverPartialOverlappingFilterSubjects
+--- PASS: TestJetStreamConsumerDeliverPartialOverlappingFilterSubjects (0.07s)
+=== RUN   TestJetStreamConsumerStateAlwaysFromStore
+--- PASS: TestJetStreamConsumerStateAlwaysFromStore (0.02s)
+=== RUN   TestJetStreamConsumerPullNoWaitBatchLargerThanPending
+=== RUN   TestJetStreamConsumerPullNoWaitBatchLargerThanPending/R1
+=== RUN   TestJetStreamConsumerPullNoWaitBatchLargerThanPending/R3
+--- PASS: TestJetStreamConsumerPullNoWaitBatchLargerThanPending (2.40s)
+    --- PASS: TestJetStreamConsumerPullNoWaitBatchLargerThanPending/R1 (2.01s)
+    --- PASS: TestJetStreamConsumerPullNoWaitBatchLargerThanPending/R3 (0.39s)
+=== RUN   TestJetStreamConsumerNotInactiveDuringAckWait
+=== RUN   TestJetStreamConsumerNotInactiveDuringAckWait/R1
+=== RUN   TestJetStreamConsumerNotInactiveDuringAckWait/R3
+--- PASS: TestJetStreamConsumerNotInactiveDuringAckWait (9.87s)
+    --- PASS: TestJetStreamConsumerNotInactiveDuringAckWait/R1 (5.99s)
+    --- PASS: TestJetStreamConsumerNotInactiveDuringAckWait/R3 (3.88s)
+=== RUN   TestJetStreamConsumerNotInactiveDuringAckWaitBackoff
+=== RUN   TestJetStreamConsumerNotInactiveDuringAckWaitBackoff/R1
+=== RUN   TestJetStreamConsumerNotInactiveDuringAckWaitBackoff/R3
+--- PASS: TestJetStreamConsumerNotInactiveDuringAckWaitBackoff (15.12s)
+    --- PASS: TestJetStreamConsumerNotInactiveDuringAckWaitBackoff/R1 (7.49s)
+    --- PASS: TestJetStreamConsumerNotInactiveDuringAckWaitBackoff/R3 (7.64s)
+=== RUN   TestJetStreamConsumerNotInactiveAfterPullRequestExpires
+=== RUN   TestJetStreamConsumerNotInactiveAfterPullRequestExpires/R1
+=== RUN   TestJetStreamConsumerNotInactiveAfterPullRequestExpires/R3
+--- PASS: TestJetStreamConsumerNotInactiveAfterPullRequestExpires (5.52s)
+    --- PASS: TestJetStreamConsumerNotInactiveAfterPullRequestExpires/R1 (2.78s)
+    --- PASS: TestJetStreamConsumerNotInactiveAfterPullRequestExpires/R3 (2.74s)
+=== RUN   TestJetStreamConsumerNotInactiveAfterPullRequestExpiresInNextWaiting
+--- PASS: TestJetStreamConsumerNotInactiveAfterPullRequestExpiresInNextWaiting (1.79s)
+=== RUN   TestJetStreamConsumerPrioritized
+=== RUN   TestJetStreamConsumerPrioritized/invalid_priority_number
+=== RUN   TestJetStreamConsumerPrioritized/priority_ordering
+=== RUN   TestJetStreamConsumerPrioritized/dynamic_priority_interruption
+--- PASS: TestJetStreamConsumerPrioritized (2.73s)
+    --- PASS: TestJetStreamConsumerPrioritized/invalid_priority_number (0.00s)
+    --- PASS: TestJetStreamConsumerPrioritized/priority_ordering (2.62s)
+    --- PASS: TestJetStreamConsumerPrioritized/dynamic_priority_interruption (0.04s)
+=== RUN   TestJetStreamConsumerMaxDeliverUnderflow
+--- PASS: TestJetStreamConsumerMaxDeliverUnderflow (0.01s)
+=== RUN   TestJetStreamConsumerMaxDeliverAdvisoryCount
+--- PASS: TestJetStreamConsumerMaxDeliverAdvisoryCount (0.02s)
+=== RUN   TestJetStreamConsumerNoWaitNoMessagesOnEos
+--- PASS: TestJetStreamConsumerNoWaitNoMessagesOnEos (0.01s)
+=== RUN   TestJetStreamConsumerNoWaitNoMessagesOnEosWithDeliveredMsgs
+--- PASS: TestJetStreamConsumerNoWaitNoMessagesOnEosWithDeliveredMsgs (0.01s)
+=== RUN   TestJetStreamConsumerEfficientInterestStateCheck
+--- PASS: TestJetStreamConsumerEfficientInterestStateCheck (0.02s)
+=== RUN   TestJetStreamConsumerWithCorruptStateIsDeleted
+--- PASS: TestJetStreamConsumerWithCorruptStateIsDeleted (0.01s)
+=== RUN   TestJetStreamConsumerNoDeleteAfterConcurrentShutdownAndLeaderChange
+--- PASS: TestJetStreamConsumerNoDeleteAfterConcurrentShutdownAndLeaderChange (0.01s)
+=== RUN   TestJetStreamConsumerOnlyRecalculatePendingIfFilterSubjectUpdated
+--- PASS: TestJetStreamConsumerOnlyRecalculatePendingIfFilterSubjectUpdated (0.01s)
+=== RUN   TestJetStreamConsumerCheckNumPending
+--- PASS: TestJetStreamConsumerCheckNumPending (0.01s)
+=== RUN   TestJetStreamConsumerAllowOverlappingSubjectsIfNotSubset
+--- PASS: TestJetStreamConsumerAllowOverlappingSubjectsIfNotSubset (0.01s)
+=== RUN   TestJetStreamConsumerResetToSequence
+=== RUN   TestJetStreamConsumerResetToSequence/R1/explicit
+=== RUN   TestJetStreamConsumerResetToSequence/R1/all
+=== RUN   TestJetStreamConsumerResetToSequence/R3/explicit
+=== RUN   TestJetStreamConsumerResetToSequence/R3/all
+--- PASS: TestJetStreamConsumerResetToSequence (1.28s)
+    --- PASS: TestJetStreamConsumerResetToSequence/R1/explicit (0.24s)
+    --- PASS: TestJetStreamConsumerResetToSequence/R1/all (0.23s)
+    --- PASS: TestJetStreamConsumerResetToSequence/R3/explicit (0.41s)
+    --- PASS: TestJetStreamConsumerResetToSequence/R3/all (0.40s)
+=== RUN   TestJetStreamConsumerResetToSequenceConstraintOnStartSeq
+--- PASS: TestJetStreamConsumerResetToSequenceConstraintOnStartSeq (0.02s)
+=== RUN   TestJetStreamConsumerResetToSequenceConstraintOnStartTime
+--- PASS: TestJetStreamConsumerResetToSequenceConstraintOnStartTime (0.02s)
+=== RUN   TestJetStreamConsumerLegacyDurableCreateSetsConsumerName
+--- PASS: TestJetStreamConsumerLegacyDurableCreateSetsConsumerName (0.01s)
+=== RUN   TestJetStreamConsumerSingleFilterSubjectInFilterSubjects
+--- PASS: TestJetStreamConsumerSingleFilterSubjectInFilterSubjects (0.01s)
+=== RUN   TestJetStreamConsumerReconcileConsumerAfterStreamDataLoss
+=== RUN   TestJetStreamConsumerReconcileConsumerAfterStreamDataLoss/1
+=== RUN   TestJetStreamConsumerReconcileConsumerAfterStreamDataLoss/2
+--- PASS: TestJetStreamConsumerReconcileConsumerAfterStreamDataLoss (0.08s)
+    --- PASS: TestJetStreamConsumerReconcileConsumerAfterStreamDataLoss/1 (0.04s)
+    --- PASS: TestJetStreamConsumerReconcileConsumerAfterStreamDataLoss/2 (0.04s)
+=== RUN   TestJetStreamConsumerStuckMaxAckPendingAfterMsgDelete
+--- PASS: TestJetStreamConsumerStuckMaxAckPendingAfterMsgDelete (4.63s)
+=== RUN   TestJetStreamConsumerAckReplyFormats
+--- PASS: TestJetStreamConsumerAckReplyFormats (0.02s)
+=== RUN   TestJetStreamConsumerAckFlowControlBasics
+=== RUN   TestJetStreamConsumerAckFlowControlBasics/R1
+=== RUN   TestJetStreamConsumerAckFlowControlBasics/R3
+--- PASS: TestJetStreamConsumerAckFlowControlBasics (0.64s)
+    --- PASS: TestJetStreamConsumerAckFlowControlBasics/R1 (0.23s)
+    --- PASS: TestJetStreamConsumerAckFlowControlBasics/R3 (0.42s)
+=== RUN   TestJetStreamConsumerWQMaxDeliveryAckFloorAdvancesWithPending
+--- PASS: TestJetStreamConsumerWQMaxDeliveryAckFloorAdvancesWithPending (0.52s)
+=== RUN   TestJetStreamConsumerWQMaxDeliveryRdcCleanedOnMaxAge
+--- PASS: TestJetStreamConsumerWQMaxDeliveryRdcCleanedOnMaxAge (1.12s)
+=== RUN   TestJetStreamConsumerMaxDeliveryRdcCleanedOnStreamPurge
+--- PASS: TestJetStreamConsumerMaxDeliveryRdcCleanedOnStreamPurge (1.08s)
+=== RUN   TestJetStreamConsumerMaxDeliveryRdcNoLeakOnBatchRemoval
+--- PASS: TestJetStreamConsumerMaxDeliveryRdcNoLeakOnBatchRemoval (0.71s)
+=== RUN   TestJetStreamConsumerCheckRedeliveredUpdatesRdc
+--- PASS: TestJetStreamConsumerCheckRedeliveredUpdatesRdc (0.01s)
+=== RUN   TestJetStreamConsumerPurgeCleanupIsReplicated
+--- PASS: TestJetStreamConsumerPurgeCleanupIsReplicated (0.78s)
+=== RUN   TestJetStreamConsumerStepDownResetsPendingAndRdc
+--- PASS: TestJetStreamConsumerStepDownResetsPendingAndRdc (0.78s)
+=== RUN   TestJetStreamConsumerStreamNumPendingOnlyOnLeader
+--- PASS: TestJetStreamConsumerStreamNumPendingOnlyOnLeader (0.36s)
+=== RUN   TestJetStreamConsumerStreamNumPendingClearedOnStepDown
+--- PASS: TestJetStreamConsumerStreamNumPendingClearedOnStepDown (0.45s)
+=== RUN   TestJetStreamConsumerUpdateConfigStopRace
+--- PASS: TestJetStreamConsumerUpdateConfigStopRace (0.12s)
+=== RUN   TestJetStreamConsumerConfigDirectRace
+--- PASS: TestJetStreamConsumerConfigDirectRace (0.01s)
+=== RUN   TestJetStreamConsumerUpdateRejectsDirectAndSourcingChange
+--- PASS: TestJetStreamConsumerUpdateRejectsDirectAndSourcingChange (0.00s)
+=== RUN   TestJetStreamConsumerSetRateLimitAccountMpayRace
+--- PASS: TestJetStreamConsumerSetRateLimitAccountMpayRace (0.00s)
+=== RUN   TestJetStreamConsumerUpdateRejectsStorageChange
+=== RUN   TestJetStreamConsumerUpdateRejectsStorageChange/FileStorage/R1
+=== RUN   TestJetStreamConsumerUpdateRejectsStorageChange/FileStorage/R3
+=== RUN   TestJetStreamConsumerUpdateRejectsStorageChange/MemoryStorage/R1
+=== RUN   TestJetStreamConsumerUpdateRejectsStorageChange/MemoryStorage/R3
+--- PASS: TestJetStreamConsumerUpdateRejectsStorageChange (0.45s)
+    --- PASS: TestJetStreamConsumerUpdateRejectsStorageChange/FileStorage/R1 (0.01s)
+    --- PASS: TestJetStreamConsumerUpdateRejectsStorageChange/FileStorage/R3 (0.22s)
+    --- PASS: TestJetStreamConsumerUpdateRejectsStorageChange/MemoryStorage/R1 (0.01s)
+    --- PASS: TestJetStreamConsumerUpdateRejectsStorageChange/MemoryStorage/R3 (0.22s)
+=== RUN   TestJetStreamConsumerResetResponseAcrossServiceImport
+=== RUN   TestJetStreamConsumerResetResponseAcrossServiceImport/R1
+=== RUN   TestJetStreamConsumerResetResponseAcrossServiceImport/R3
+--- PASS: TestJetStreamConsumerResetResponseAcrossServiceImport (0.56s)
+    --- PASS: TestJetStreamConsumerResetResponseAcrossServiceImport/R1 (0.01s)
+    --- PASS: TestJetStreamConsumerResetResponseAcrossServiceImport/R3 (0.55s)
+=== RUN   TestJetStreamConsumerFlowControlResetOnLeaderChange
+--- PASS: TestJetStreamConsumerFlowControlResetOnLeaderChange (0.04s)
+=== RUN   TestJetStreamConsumerCreateCollisionPreservesExistingConsumerStore
+--- PASS: TestJetStreamConsumerCreateCollisionPreservesExistingConsumerStore (0.00s)
+=== RUN   TestJetStreamConsumerFailedRecoverStateDoesNotLeakInternalClients
+--- PASS: TestJetStreamConsumerFailedRecoverStateDoesNotLeakInternalClients (0.01s)
+=== RUN   TestJetStreamConsumerCreateNameTooLongDoesNotDeleteObsStream
+--- PASS: TestJetStreamConsumerCreateNameTooLongDoesNotDeleteObsStream (0.01s)
+=== RUN   TestJetStreamConsumerCreateCollisionPreservesExistingConsumerQueues
+--- PASS: TestJetStreamConsumerCreateCollisionPreservesExistingConsumerQueues (0.00s)
+=== RUN   TestJetStreamConsumerDeliveryCountUnderflow
+--- PASS: TestJetStreamConsumerDeliveryCountUnderflow (0.01s)
+=== RUN   TestJetStreamRedeliverAndLateAck
+--- PASS: TestJetStreamRedeliverAndLateAck (0.17s)
+=== RUN   TestJetStreamCanNotNakAckd
+=== RUN   TestJetStreamCanNotNakAckd/MemoryStore
+=== RUN   TestJetStreamCanNotNakAckd/FileStore
+--- PASS: TestJetStreamCanNotNakAckd (0.15s)
+    --- PASS: TestJetStreamCanNotNakAckd/MemoryStore (0.07s)
+    --- PASS: TestJetStreamCanNotNakAckd/FileStore (0.08s)
+PASS
+ok  	github.com/nats-io/nats-server/v2/server	207.871s

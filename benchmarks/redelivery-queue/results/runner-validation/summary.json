@@ -1,0 +1,510 @@
+{
+  "created_utc": "2026-09-23T01:06:48.944305+00:00",
+  "image": "golang:1.26.7-bookworm@sha256:e8c859f5632dcfde7b32d2012b4351728f6437930887c2f6a91ea242459e5514",
+  "cpus": 4,
+  "memory_bytes": 12884901888,
+  "gomaxprocs": 4,
+  "pending_seed": 12000000,
+  "duration": "20s",
+  "repetitions": 2,
+  "harness_sha256": {
+    "consumer_flush_protocol_experiment_test.go.txt": "6763dd13729e399e5d69fec213b1f88a8e11afeb0b401a4edb4a132224ae9062",
+    "consumer_flush_state_test.go.txt": "21cc42b2892c8bd7bb550cb8597e0320c064abaedcae65a6c35efdbe03a42033"
+  },
+  "sources": {
+    "baseline": {
+      "repository": "nats-io/nats-server",
+      "revision": "edb1b17a76f149d501131502b847939a14ce300d",
+      "archive_sha256": "ce1b4eb370d1e0fd1f2eedd36dcbcfd166f4a5206d16c0c68a66cb5b6bea6460"
+    },
+    "dequeue": {
+      "repository": "as-clearview/nats-server",
+      "revision": "e85c332f4f5b24d3c8a87606d5ea19095c16fc6c",
+      "archive_sha256": "9f20a530f752c8f3d17f5eb48ac9b9359863574d1b87e4f31cfa85df6ffd8a01"
+    }
+  },
+  "runs": [
+    {
+      "variant": "baseline",
+      "repetition": 1,
+      "log": "baseline-protocol-run1.log",
+      "log_sha256": "513ccdc70a954df3a0d0ff901f186e209e27fe107cbf56c1fbd99306d91b896a",
+      "result": {
+        "acks_unprocessed_at_stop": 223714,
+        "acks_unprocessed_peak": 226105,
+        "allocated_bytes": 31890542208,
+        "delivered_at_stop": 2369,
+        "drain_seconds": 11.925059672,
+        "final_confirmed": 1918,
+        "final_p50_ms": 11844.357672,
+        "final_p95_ms": 12055.662283,
+        "final_p99_ms": 12083.948631,
+        "final_sent": 1918,
+        "gc_cycles": 18,
+        "offered_seconds": 20.158023134,
+        "pending_seed": 12000000,
+        "progress_sent": 383600,
+        "redelivery_enabled": true,
+        "samples": [
+          {
+            "acks_unprocessed": 10654,
+            "delivered": 140,
+            "elapsed_s": 1.000848001
+          },
+          {
+            "acks_unprocessed": 20591,
+            "delivered": 193,
+            "elapsed_s": 2.001524501
+          },
+          {
+            "acks_unprocessed": 32764,
+            "delivered": 318,
+            "elapsed_s": 3.01100196
+          },
+          {
+            "acks_unprocessed": 42010,
+            "delivered": 427,
+            "elapsed_s": 4.020257294
+          },
+          {
+            "acks_unprocessed": 54271,
+            "delivered": 522,
+            "elapsed_s": 5.020528377
+          },
+          {
+            "acks_unprocessed": 63315,
+            "delivered": 651,
+            "elapsed_s": 6.02078717
+          },
+          {
+            "acks_unprocessed": 74762,
+            "delivered": 787,
+            "elapsed_s": 7.021952837
+          },
+          {
+            "acks_unprocessed": 86214,
+            "delivered": 908,
+            "elapsed_s": 8.030781921
+          },
+          {
+            "acks_unprocessed": 99295,
+            "delivered": 998,
+            "elapsed_s": 9.040599921
+          },
+          {
+            "acks_unprocessed": 109345,
+            "delivered": 1125,
+            "elapsed_s": 10.041008838
+          },
+          {
+            "acks_unprocessed": 119465,
+            "delivered": 1249,
+            "elapsed_s": 11.052772754
+          },
+          {
+            "acks_unprocessed": 132862,
+            "delivered": 1374,
+            "elapsed_s": 12.06096688
+          },
+          {
+            "acks_unprocessed": 143113,
+            "delivered": 1500,
+            "elapsed_s": 13.071486839
+          },
+          {
+            "acks_unprocessed": 154972,
+            "delivered": 1595,
+            "elapsed_s": 14.082261964
+          },
+          {
+            "acks_unprocessed": 167413,
+            "delivered": 1732,
+            "elapsed_s": 15.090958381
+          },
+          {
+            "acks_unprocessed": 179896,
+            "delivered": 1854,
+            "elapsed_s": 16.100248507
+          },
+          {
+            "acks_unprocessed": 191407,
+            "delivered": 1960,
+            "elapsed_s": 17.101968257
+          },
+          {
+            "acks_unprocessed": 203614,
+            "delivered": 2080,
+            "elapsed_s": 18.111012883
+          },
+          {
+            "acks_unprocessed": 213840,
+            "delivered": 2241,
+            "elapsed_s": 19.112222258
+          }
+        ]
+      }
+    },
+    {
+      "variant": "dequeue",
+      "repetition": 1,
+      "log": "dequeue-protocol-run1.log",
+      "log_sha256": "85688a5c3b6dbfa3684ab1dee97a94c38087a1ff447a1aa90f3c037c27705d30",
+      "result": {
+        "acks_unprocessed_at_stop": 26533,
+        "acks_unprocessed_peak": 28744,
+        "allocated_bytes": 21970925456,
+        "delivered_at_stop": 120700,
+        "drain_seconds": 1.5385298349999985,
+        "final_confirmed": 1917,
+        "final_p50_ms": 760.091501,
+        "final_p95_ms": 1440.562959,
+        "final_p99_ms": 1524.664959,
+        "final_sent": 1917,
+        "gc_cycles": 13,
+        "offered_seconds": 20.002093425,
+        "pending_seed": 12000000,
+        "progress_sent": 383400,
+        "redelivery_enabled": true,
+        "samples": [
+          {
+            "acks_unprocessed": 5026,
+            "delivered": 4300,
+            "elapsed_s": 1.001844583
+          },
+          {
+            "acks_unprocessed": 4422,
+            "delivered": 10900,
+            "elapsed_s": 2.012210417
+          },
+          {
+            "acks_unprocessed": 4015,
+            "delivered": 17300,
+            "elapsed_s": 3.030569418
+          },
+          {
+            "acks_unprocessed": 4624,
+            "delivered": 24000,
+            "elapsed_s": 4.031265626
+          },
+          {
+            "acks_unprocessed": 10453,
+            "delivered": 28200,
+            "elapsed_s": 5.040974877
+          },
+          {
+            "acks_unprocessed": 9046,
+            "delivered": 34700,
+            "elapsed_s": 6.041528002
+          },
+          {
+            "acks_unprocessed": 9247,
+            "delivered": 41200,
+            "elapsed_s": 7.041633795
+          },
+          {
+            "acks_unprocessed": 11659,
+            "delivered": 46500,
+            "elapsed_s": 8.052015378
+          },
+          {
+            "acks_unprocessed": 12061,
+            "delivered": 53200,
+            "elapsed_s": 9.060052462
+          },
+          {
+            "acks_unprocessed": 14674,
+            "delivered": 59000,
+            "elapsed_s": 10.061724879
+          },
+          {
+            "acks_unprocessed": 15277,
+            "delivered": 65700,
+            "elapsed_s": 11.061933546
+          },
+          {
+            "acks_unprocessed": 14473,
+            "delivered": 72600,
+            "elapsed_s": 12.07037138
+          },
+          {
+            "acks_unprocessed": 15874,
+            "delivered": 79100,
+            "elapsed_s": 13.081408172
+          },
+          {
+            "acks_unprocessed": 20704,
+            "delivered": 84100,
+            "elapsed_s": 14.082334215
+          },
+          {
+            "acks_unprocessed": 19689,
+            "delivered": 90700,
+            "elapsed_s": 15.090228298
+          },
+          {
+            "acks_unprocessed": 20101,
+            "delivered": 97700,
+            "elapsed_s": 16.090647841
+          },
+          {
+            "acks_unprocessed": 23719,
+            "delivered": 103100,
+            "elapsed_s": 17.100964466
+          },
+          {
+            "acks_unprocessed": 25930,
+            "delivered": 109600,
+            "elapsed_s": 18.1012438
+          },
+          {
+            "acks_unprocessed": 25327,
+            "delivered": 115800,
+            "elapsed_s": 19.1019163
+          }
+        ]
+      }
+    },
+    {
+      "variant": "dequeue",
+      "repetition": 2,
+      "log": "dequeue-protocol-run2.log",
+      "log_sha256": "12eb1132a184769746c7a597d2b86ebb187a5ede2b50fee51bbcbe21fa5dcbc0",
+      "result": {
+        "acks_unprocessed_at_stop": 2614,
+        "acks_unprocessed_peak": 7237,
+        "allocated_bytes": 22972236192,
+        "delivered_at_stop": 416000,
+        "drain_seconds": 0.10222308399999847,
+        "final_confirmed": 1926,
+        "final_p50_ms": 113.639792,
+        "final_p95_ms": 247.039333,
+        "final_p99_ms": 315.268083,
+        "final_sent": 1926,
+        "gc_cycles": 15,
+        "offered_seconds": 20.090912925,
+        "pending_seed": 12000000,
+        "progress_sent": 385200,
+        "redelivery_enabled": true,
+        "samples": [
+          {
+            "acks_unprocessed": 3409,
+            "delivered": 4600,
+            "elapsed_s": 1.001751501
+          },
+          {
+            "acks_unprocessed": 3619,
+            "delivered": 10900,
+            "elapsed_s": 2.010322959
+          },
+          {
+            "acks_unprocessed": 2413,
+            "delivered": 18200,
+            "elapsed_s": 3.010907335
+          },
+          {
+            "acks_unprocessed": 2011,
+            "delivered": 37700,
+            "elapsed_s": 4.020805752
+          },
+          {
+            "acks_unprocessed": 3618,
+            "delivered": 63700,
+            "elapsed_s": 5.020990003
+          },
+          {
+            "acks_unprocessed": 2413,
+            "delivered": 75600,
+            "elapsed_s": 6.021936336
+          },
+          {
+            "acks_unprocessed": 202,
+            "delivered": 87400,
+            "elapsed_s": 7.021994462
+          },
+          {
+            "acks_unprocessed": 64,
+            "delivered": 107400,
+            "elapsed_s": 8.033443003
+          },
+          {
+            "acks_unprocessed": 2412,
+            "delivered": 120800,
+            "elapsed_s": 9.042203003
+          },
+          {
+            "acks_unprocessed": 2815,
+            "delivered": 145100,
+            "elapsed_s": 10.052454962
+          },
+          {
+            "acks_unprocessed": 14,
+            "delivered": 184400,
+            "elapsed_s": 11.060953879
+          },
+          {
+            "acks_unprocessed": 184,
+            "delivered": 206000,
+            "elapsed_s": 12.07186038
+          },
+          {
+            "acks_unprocessed": 2614,
+            "delivered": 230800,
+            "elapsed_s": 13.072208172
+          },
+          {
+            "acks_unprocessed": 1609,
+            "delivered": 243900,
+            "elapsed_s": 14.080924756
+          },
+          {
+            "acks_unprocessed": 1407,
+            "delivered": 275500,
+            "elapsed_s": 15.08323034
+          },
+          {
+            "acks_unprocessed": 1609,
+            "delivered": 299900,
+            "elapsed_s": 16.090611382
+          },
+          {
+            "acks_unprocessed": 3217,
+            "delivered": 333400,
+            "elapsed_s": 17.102192841
+          },
+          {
+            "acks_unprocessed": 2011,
+            "delivered": 357800,
+            "elapsed_s": 18.111896924
+          },
+          {
+            "acks_unprocessed": 1810,
+            "delivered": 384000,
+            "elapsed_s": 19.12120555
+          }
+        ]
+      }
+    },
+    {
+      "variant": "baseline",
+      "repetition": 2,
+      "log": "baseline-protocol-run2.log",
+      "log_sha256": "af9d9ccac7cb136c0d06de3c99e43da1ff6090e6e1eefde9722ffce36e9b225b",
+      "result": {
+        "acks_unprocessed_at_stop": 226528,
+        "acks_unprocessed_peak": 226930,
+        "allocated_bytes": 32247181072,
+        "delivered_at_stop": 2298,
+        "drain_seconds": 12.259005129000002,
+        "final_confirmed": 1923,
+        "final_p50_ms": 11878.886798,
+        "final_p95_ms": 12115.772672,
+        "final_p99_ms": 12164.051824,
+        "final_sent": 1923,
+        "gc_cycles": 18,
+        "offered_seconds": 20.013137635,
+        "pending_seed": 12000000,
+        "progress_sent": 384600,
+        "redelivery_enabled": true,
+        "samples": [
+          {
+            "acks_unprocessed": 12039,
+            "delivered": 86,
+            "elapsed_s": 1.002027
+          },
+          {
+            "acks_unprocessed": 22513,
+            "delivered": 203,
+            "elapsed_s": 2.010784543
+          },
+          {
+            "acks_unprocessed": 33769,
+            "delivered": 334,
+            "elapsed_s": 3.020933126
+          },
+          {
+            "acks_unprocessed": 45226,
+            "delivered": 460,
+            "elapsed_s": 4.022307335
+          },
+          {
+            "acks_unprocessed": 58291,
+            "delivered": 580,
+            "elapsed_s": 5.032019752
+          },
+          {
+            "acks_unprocessed": 68505,
+            "delivered": 663,
+            "elapsed_s": 6.04173267
+          },
+          {
+            "acks_unprocessed": 79597,
+            "delivered": 786,
+            "elapsed_s": 7.042282628
+          },
+          {
+            "acks_unprocessed": 89647,
+            "delivered": 906,
+            "elapsed_s": 8.042309087
+          },
+          {
+            "acks_unprocessed": 100702,
+            "delivered": 1021,
+            "elapsed_s": 9.052176754
+          },
+          {
+            "acks_unprocessed": 113457,
+            "delivered": 1145,
+            "elapsed_s": 10.06158663
+          },
+          {
+            "acks_unprocessed": 123794,
+            "delivered": 1266,
+            "elapsed_s": 11.062272672
+          },
+          {
+            "acks_unprocessed": 134671,
+            "delivered": 1378,
+            "elapsed_s": 12.071931006
+          },
+          {
+            "acks_unprocessed": 146116,
+            "delivered": 1469,
+            "elapsed_s": 13.08058209
+          },
+          {
+            "acks_unprocessed": 158992,
+            "delivered": 1584,
+            "elapsed_s": 14.081956923
+          },
+          {
+            "acks_unprocessed": 168640,
+            "delivered": 1666,
+            "elapsed_s": 15.090077341
+          },
+          {
+            "acks_unprocessed": 180298,
+            "delivered": 1825,
+            "elapsed_s": 16.092289216
+          },
+          {
+            "acks_unprocessed": 192525,
+            "delivered": 1888,
+            "elapsed_s": 17.101146008
+          },
+          {
+            "acks_unprocessed": 205402,
+            "delivered": 2043,
+            "elapsed_s": 18.110956592
+          },
+          {
+            "acks_unprocessed": 216286,
+            "delivered": 2161,
+            "elapsed_s": 19.111349842
+          }
+        ]
+      }
+    }
+  ],
+  "queue_test_sha256": "95d6c97c2bb06b35209faeedaa74cc42bf732fe841fffda250b9ba7d144a0fd1",
+  "platform": "linux/arm64"
+}

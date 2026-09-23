@@ -105,7 +105,54 @@ application processing. The harness counts returned messages but does not classi
 that limitation is preserved to retain the measured harness. The small smoke case can exhaust
 its redelivery queue quickly and is only a correctness/setup check.
 
-## Recorded evidence
+## Public-runner validation
+
+The unchanged runner from benchmark commit `eede1dde8e79b79d2aae05b9e7a7f84a60ff692f`
+completed `--full --microbench` against the exact pinned baseline and candidate commits.
+[Raw logs and structured results](results/runner-validation/) preserve the complete run;
+[file hashes](results/runner-validation/sha256.json) cover the recorded artifacts.
+
+| Two runs per variant, 12 million entries | Baseline | Dequeue fix |
+| --- | ---: | ---: |
+| Final-ACK confirmation p95 | 12.06–12.12 s | 0.25–1.44 s |
+| Redeliveries during ~20 s | 2,298–2,369 | 120,700–416,000 |
+| Unprocessed ACK commands at stop | 223,714–226,528 | 2,614–26,533 |
+| Drain after stopping load | 11.93–12.26 s | 0.10–1.54 s |
+
+All four protocol tests confirmed every final ACK and verified the expected retained-message
+count. All 24 microbenchmark samples completed (four sizes, three repetitions, two variants).
+The sizable variation between candidate runs remains important; these are ranges from a
+small local sample, not confidence intervals or production guarantees.
+
+An earlier attempt encountered ACK-drain timeout and Docker storage I/O errors with the host
+nearly out of disk space. It is excluded as invalid/incomplete. The run above was started fresh
+after freeing disk space, restarting Docker, and verifying storage writes; it does not combine
+samples from the failed attempt. Benchmarks ran separately from correctness tests.
+
+### Expanded correctness validation
+
+On candidate `e85c332f4f5b24d3c8a87606d5ea19095c16fc6c`, **207 top-level tests passed with
+`-race` in 207.871 seconds**, including the full `TestJetStreamConsumer` selection, queue tests,
+consumer-store tests, and two read-only-filesystem permission regressions.
+[Verbose test output](results/runner-validation/consumer-race.log).
+
+```sh
+go test -race ./server \
+  -run '^(TestConsumerRedeliveryQueue.*|TestFileStoreConsumer.*|TestJetStreamConsumer.*|TestJetStreamRedeliverAndLateAck|TestJetStreamCanNotNakAckd|TestFileStore.*PermissionErrorIfFSModeReadOnly)$' \
+  -count=1 -v -timeout=15m
+```
+
+This used the same pinned Go image, Linux/arm64, 4 CPUs, 12 GiB, `GOTOOLCHAIN=local`,
+`GOMAXPROCS=4`, and no container network. Docker options
+`--cap-drop=DAC_OVERRIDE --cap-drop=DAC_READ_SEARCH` prevent root from bypassing the
+filesystem permissions those two tests exercise. Both passed after an earlier root-container
+server-suite attempt stopped at a permission assertion (531 top-level tests had passed).
+
+A full `go test ./...` attempt also stopped in logger tests because the image lacks a syslog
+service. **The full repository suite and upstream CI matrix have not completed successfully.**
+The expanded race selection is not presented as a substitute for that matrix.
+
+## Historical evidence
 
 [Machine-readable results and provenance](results/summary.json) include the raw output, hashes,
 and per-second samples. These are **historical local measurements**, not reruns made by this

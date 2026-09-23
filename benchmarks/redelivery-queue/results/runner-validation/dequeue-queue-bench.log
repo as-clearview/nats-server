@@ -1,0 +1,17 @@
+goos: linux
+goarch: arm64
+pkg: github.com/nats-io/nats-server/v2/server
+BenchmarkConsumerRedeliveryQueue/1-4 	18626694	        78.54 ns/op	     296 B/op	       2 allocs/op
+BenchmarkConsumerRedeliveryQueue/1-4 	19744594	        78.76 ns/op	     296 B/op	       2 allocs/op
+BenchmarkConsumerRedeliveryQueue/1-4 	19149202	        77.40 ns/op	     296 B/op	       2 allocs/op
+BenchmarkConsumerRedeliveryQueue/64-4         	96609606	        12.66 ns/op	      15 B/op	       0 allocs/op
+BenchmarkConsumerRedeliveryQueue/64-4         	97519683	        12.83 ns/op	      15 B/op	       0 allocs/op
+BenchmarkConsumerRedeliveryQueue/64-4         	97214204	        12.72 ns/op	      15 B/op	       0 allocs/op
+BenchmarkConsumerRedeliveryQueue/4096-4       	70696183	        17.66 ns/op	      24 B/op	       0 allocs/op
+BenchmarkConsumerRedeliveryQueue/4096-4       	70275952	        17.75 ns/op	      24 B/op	       0 allocs/op
+BenchmarkConsumerRedeliveryQueue/4096-4       	70098747	        17.69 ns/op	      24 B/op	       0 allocs/op
+BenchmarkConsumerRedeliveryQueue/1000000-4    	26111434	        46.15 ns/op	      40 B/op	       0 allocs/op
+BenchmarkConsumerRedeliveryQueue/1000000-4    	26256888	        45.91 ns/op	      39 B/op	       0 allocs/op
+BenchmarkConsumerRedeliveryQueue/1000000-4    	26347760	        43.44 ns/op	      40 B/op	       0 allocs/op
+PASS
+ok  	github.com/nats-io/nats-server/v2/server	16.517s
